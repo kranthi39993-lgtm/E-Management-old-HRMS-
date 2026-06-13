@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "C:\...\Site\", "Site\", "{9E62FF68-96CC-441F-B33B-2DD069793270}"
+	ProjectSection(WebsiteProperties) = preProject
+		ProjectReferences = "{7C426408-97E1-4D23-AFF6-F688F5CCF8E7}|Winthusiasm.HtmlEditor.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/Site"
+		Debug.AspNetCompiler.PhysicalPath = "Site\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Site\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Site"
+		Release.AspNetCompiler.PhysicalPath = "Site\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Site\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "57294"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{7C426408-97E1-4D23-AFF6-F688F5CCF8E7} = {7C426408-97E1-4D23-AFF6-F688F5CCF8E7}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Winthusiasm.HtmlEditor", "Winthusiasm.HtmlEditor\Winthusiasm.HtmlEditor.csproj", "{7C426408-97E1-4D23-AFF6-F688F5CCF8E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E62FF68-96CC-441F-B33B-2DD069793270}.Debug|.NET.ActiveCfg = Debug|.NET
+		{9E62FF68-96CC-441F-B33B-2DD069793270}.Debug|.NET.Build.0 = Debug|.NET
+		{9E62FF68-96CC-441F-B33B-2DD069793270}.Debug|Any CPU.ActiveCfg = Debug|.NET
+		{9E62FF68-96CC-441F-B33B-2DD069793270}.Debug|Mixed Platforms.ActiveCfg = Debug|.NET
+		{9E62FF68-96CC-441F-B33B-2DD069793270}.Debug|Mixed Platforms.Build.0 = Debug|.NET
+		{9E62FF68-96CC-441F-B33B-2DD069793270}.Release|.NET.ActiveCfg = Debug|.NET
+		{9E62FF68-96CC-441F-B33B-2DD069793270}.Release|.NET.Build.0 = Debug|.NET
+		{9E62FF68-96CC-441F-B33B-2DD069793270}.Release|Any CPU.ActiveCfg = Debug|.NET
+		{9E62FF68-96CC-441F-B33B-2DD069793270}.Release|Mixed Platforms.ActiveCfg = Debug|.NET
+		{9E62FF68-96CC-441F-B33B-2DD069793270}.Release|Mixed Platforms.Build.0 = Debug|.NET
+		{7C426408-97E1-4D23-AFF6-F688F5CCF8E7}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{7C426408-97E1-4D23-AFF6-F688F5CCF8E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C426408-97E1-4D23-AFF6-F688F5CCF8E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C426408-97E1-4D23-AFF6-F688F5CCF8E7}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{7C426408-97E1-4D23-AFF6-F688F5CCF8E7}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{7C426408-97E1-4D23-AFF6-F688F5CCF8E7}.Release|.NET.ActiveCfg = Release|Any CPU
+		{7C426408-97E1-4D23-AFF6-F688F5CCF8E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C426408-97E1-4D23-AFF6-F688F5CCF8E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C426408-97E1-4D23-AFF6-F688F5CCF8E7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{7C426408-97E1-4D23-AFF6-F688F5CCF8E7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,92 @@
+<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="ems.master.vb" Inherits="E_Management.ems" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<%@ Register Assembly="CrystalDecisions.Web, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304"
+    Namespace="CrystalDecisions.Web" TagPrefix="CR" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+		<title>E-Management system</title>
+            <link rel="stylesheet" type="text/css" href="~/css/style.css" /> 
+            <link rel="stylesheet" type="text/css" href="~/css/stylesheet.css" />
+            <meta http-equiv='refresh' content='1200;url=http://mmsbsql1/emgmt/SessionExpired.aspx'  />
+                      
+</head>
+<body>
+<form id="form1" runat="server">
+   <table id="HeaderTable" cellspacing="0" cellpadding="0" width="100%" bgcolor="#006699" border="0">
+	<tr height="17">
+		<TD style="width: 37px; height: 12px;">
+		<asp:Image runat=server ImageUrl="~/images/topLeftCorner.gif" Width ="36" Height="20" ID =img2 />
+		<TD valign="middle" style="height: 12px; width: 100%;">&nbsp;<FONT style="FONT-SIZE: 11px; FONT-FAMILY: Tahoma" color="white"><strong><span
+            style="font-size: 14pt"></span></strong></FONT></TD>
+		<TD align="right" width="17" style="height: 12px">
+		<asp:Image ID="Image1" runat=server ImageUrl="~/images/topRightCorner.gif" Width ="36" Height="20" />
+	</TD>
+	</tr>
+	<tr height="17">
+		<TD style="height: 9px; width: 37px;">&nbsp;</TD>
+		<TD valign="middle" align="center" nowrap="nowrap" style="height: 9px; vertical-align: middle; text-align: left; width: 100%;">
+            <strong><span style="font-size: 14pt; color: #ffffff; font-family: Tahoma">
+            Maruwa Malaysia E-Management System</span></strong>
+            &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp;<asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" ForeColor="White">Sign Out</asp:LinkButton></TD>
+		<TD width="17" style="height: 9px">&nbsp;</TD>
+	</tr>
+	<tr>
+		<TD bgcolor="black" colspan="3"><IMG height="1" alt="" hspace="0" src="" width="1" border="0"></TD>
+	</tr>
+	<tr>
+		<TD bgcolor="white" colspan="3"><IMG height="1" alt="" hspace="0" src="" width="1" border="0"></TD>
+	</tr>
+	<tr>
+		<TD bgcolor="silver" colspan="3"><IMG height="1" alt="" hspace="0" src="" width="1" border="0"></TD>
+	</tr></table>
+<asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" Width="100%" BackColor="#EFEFDE" Font-Size="Larger" Font-Bold="True" Font-Italic="False" StaticSubMenuIndent="7px" StaticTopSeparatorImageUrl="~/images/top_mid1.GIF" DynamicBottomSeparatorImageUrl="~/images/top_mid9.GIF">
+                <StaticMenuStyle BorderStyle="None" BackColor="#EFEFDE" />
+                <StaticMenuItemStyle BorderStyle="None" />
+                <DynamicHoverStyle BackColor="GreenYellow" Font-Italic="False" Font-Size="Larger" />
+                <DynamicMenuItemStyle BackColor="White" ForeColor="Black" VerticalPadding="2px" HorizontalPadding="5px" />
+                <DynamicMenuStyle BackColor="White" />
+            </asp:Menu>
+	<table width=100% cellpadding="0" cellspacing="0">
+		<tr height="10">
+		<TD style="height: 10px; width: 37px; background-color: #f5f5fa;">
+		<asp:Image ID="Image2" runat=server ImageUrl="~/images/header_curve_low_left.gif" Width ="36" Height="17px" />
+	</TD>
+	
+		<TD valign="middle" width="100%" bgcolor="#efefde" style="height: 10px">&nbsp; 
+						<!----------------------------------------------------------------------------------->
+						<!--Views Command Menu-->
+						<!-----------------------------------------------------------------------------------></TD>
+		<TD width="17" bgcolor="#efefde" style="height: 10px">
+		<asp:Image ID="Image3" runat=server ImageUrl="~/images/header_curve_low_right.gif" Width ="36" Height="17px" />
+	
+		</TD>
+	</tr>
+</table>
+             <asp:ScriptManager ID="ScriptManager1" runat="server">
+            </asp:ScriptManager>
+    <table border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%">
+        <tr>
+          <td valign="top">          &nbsp;</td>
+            <td valign="top" style="vertical-align: top; text-align: left;height: 400px; background-color: white;" >
+                 <asp:ContentPlaceHolder ID="CPHApplication" runat="server">
+                    </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+      
+
+    </table>
+    <table width=100% ><tr><td colspan="2" style="vertical-align: middle; height: 20%; text-align: center; background-color: steelblue;">
+                   
+                    Copyright @ 2010 Maruwa (M) Sdn. Bhd.All Rights Reserved<br />
+                </td></tr></table>
+</form>
+</body>
+</html>

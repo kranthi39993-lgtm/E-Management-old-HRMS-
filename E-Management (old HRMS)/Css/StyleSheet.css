@@ -1,0 +1,287 @@
+﻿	
+	body 
+{
+    background-image :"~\images\maruwanewlogo.jpg";
+    font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    font-style:normal;
+    font-size:10px;
+   /* border: 1px solid #2F4F4F;*/  
+    padding-left : 15px;
+    padding-right : 15px;        
+     
+}
+a
+{
+   font-family:Tahoma;
+    font-weight:normal;
+    font-style:normal;
+    color:Black;
+    font-size:11px;
+}  
+a_tab
+{
+   font-family:Arial;
+    font-weight:bold;
+    font-style:normal;
+    color:white;
+    font-size:15px;   
+}  
+.headerText
+{
+    font-family:Arial;
+    font-weight:bold;
+    font-style:normal;
+    color:white;
+    font-size:11px;
+    background-color:#666666;
+}
+.headerAccord
+{
+    font-family:Arial;
+    font-weight:bold;
+    font-style:normal;
+    color:white;
+    font-size:11px;
+    background-color:Blue;
+}
+.subTitle
+{
+    font-family: "Trebuchet MS" , Verdana, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color: #ffffff;
+    font-size: 11px;
+}
+.submenu
+{
+    font-family:Arial;
+    font-weight:normal;
+    font-style:normal;
+    color:#336666;
+    font-size:12px;
+    background-color:#F0F6F6;
+}
+/******************************/
+/**Styling information specific to individual content pages**/
+/* Accordion */
+.accordionHeader
+{
+    color: white;
+    background-color: #2E4d7B;
+	font-family: Arial, Sans-Serif;
+	font-size: 12px;
+	font-weight: bold;
+    padding: 5px;
+    margin-top: 0px; /* 5px; */
+    cursor: pointer;
+}
+#master_content .accordionHeader a
+{
+	color: #FFFFFF;
+	background: none;
+	text-decoration: none;
+}
+#master_content .accordionHeader a:hover
+{
+	background: none;
+	text-decoration: underline;
+}
+.accordionHeaderSelected
+{
+    color: white;
+    background-color: #5078B3;
+	font-family: Arial, Sans-Serif;
+	font-size: 12px;
+	font-weight: bold;
+    padding: 5px;
+    margin-top: 0px; /*   5px;  */
+    cursor: pointer;
+}
+#master_content .accordionHeaderSelected a
+{
+	color: #FFFFFF;
+	background: none;
+	text-decoration: none;
+}
+
+#master_content .accordionHeaderSelected a:hover
+{
+	background: none;
+	text-decoration: underline;
+	
+}
+
+.accordionContent
+{
+   
+    border-top: none;
+    padding: 5px;
+    padding-top: 0px; /* 10px; */   
+
+    background-color :Gray;
+}
+.accordionHeader_freUsed
+{
+    background-color: #1a5c9b ;
+    padding: 5px;
+    padding-top: 0px; /*  10px; */
+    cursor: pointer;
+  
+}
+.accordionContent_freUsed
+{
+    background-color: #EFF3FB;
+    padding: 5px;
+    padding-top: 0px; /* 10px; */
+}
+.accordionContent_withoutmenu
+{
+    background-color:  #1a5c9b ;
+    padding-top: 0px; /* 10px; */
+}
+
+
+/* Rounded Corners*/
+
+.roundedPanel
+{	
+	width:300px;
+	background-color:#ffffff;
+	color:black;
+	font-weight:bold;
+}
+
+/* Control styles */
+.textile
+{
+	
+	font-family :Bookman Old Style ;
+	color:Black   ;
+	font-size :13px;
+		
+	
+}
+.button_a
+   
+     {       margin:0px; padding:0px;  
+		     background-color : #E9EAC2;   
+		     border-top-style:solid; 
+		     border-top-color:#D0D0D0;      
+		     border-top-width:2px;      
+		     border-left-style:solid;      
+		     border-left-color:#D0D0D0;      
+		     border-left-width:2px;      
+		     color:#404040;      
+		     cursor:pointer;   
+		     
+	   }
+	   
+	   /*  NEWLY ADDED  */
+.lblclass
+{
+    background-color:White;
+    font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    font-style:normal;
+    font-size:11px;
+    border: 1px solid tan;
+}
+.div { z-index: 9999; }
+
+.td_des
+{
+    border-bottom: #1a5c9b 1px dotted;
+    
+}
+#td linkbutton.hover
+{
+    background: none;
+	text-decoration: underline;
+}
+.statusclass
+{
+    background: none;
+	text-decoration: underline;
+	cursor:hand;
+}
+
+.td_head
+{
+    COLOR: white; BACKGROUND-COLOR: #5D7B9D; FONT-VARIANT: normal; text-align :center 
+    }
+
+.cal_Theme1 .ajax__calendar_container  
+ {    background-color: white ;   
+      border:solid 1px #cccccc;}
+.cal_Theme1 .ajax__calendar_header  
+{    background-color: #CCCCCC;    
+     margin-bottom: 4px;}
+     
+.cal_Theme1 .ajax__calendar_title,
+.cal_Theme1 .ajax__calendar_next,
+.cal_Theme1 .ajax__calendar_prev   
+
+ {    color: black;     padding-top: 3px;}
+ .cal_Theme1 .ajax__calendar_body    
+ {    background-color: White; font-weight: normal;      border: solid 1px #cccccc;}
+ .cal_Theme1 .ajax__calendar_dayname 
+ {    text-align:center;     font-weight:bold;     margin-bottom: 4px;     margin-top: 2px;}
+ .cal_Theme1 .ajax__calendar_day {    text-align:center;}
+ .cal_Theme1 .ajax__calendar_hover 
+ .ajax__calendar_day,
+ .cal_Theme1 .ajax__calendar_hover 
+ .ajax__calendar_month,.cal_Theme1 
+ .ajax__calendar_hover
+  .ajax__calendar_year,.cal_Theme1
+   .ajax__calendar_active  
+   {    color: #004080;     font-weight:bold;     background-color:#cccccc ;}
+   .cal_Theme1 .ajax__calendar_today   {    font-weight:normal;}
+   .cal_Theme1 .ajax__calendar_other,
+   .cal_Theme1 .ajax__calendar_hover 
+   .ajax__calendar_today,.cal_Theme1 
+   .ajax__calendar_hover 
+   .ajax__calendar_title {    color:#cccccc;}
+   
+   
+   .GridviewDiv {font-size: 62.5%; font-family: 'Lucida Grande', 
+    'Lucida Sans Unicode', Verdana, Arial, Helevetica, sans-serif; color: #303933;}
+Table.Gridview{border:solid 1px #df5015;}
+.GridviewTable{border:none}
+.GridviewTable td{margin-top:0;padding: 0; vertical-align:middle }
+.GridviewTable tr{color: White; background-color: #df5015; height: 30px; text-align:center}
+.Gridview th{color:#FFFFFF;border-right-color:#abb079;border-bottom-color:#abb079;
+    padding:0.5em 0.5em 0.5em 0.5em;text-align:center}  
+.Gridview td{border-bottom-color:#f0f2da;border-right-color:#f0f2da;
+    padding:0.5em 0.5em 0.5em 0.5em;}
+.Gridview tr{color: Black; background-color: White; text-align:left}
+
+ input.error  
+{ 
+ background: #fed; border: 1px solid red; 
+}
+ .modalBackground 
+    {
+              background-color:Gray ; 
+              filter:alpha(opacity=70);
+              opacity:0.7; 
+    } 
+
+    .modalPopup 
+    {
+              background-color:#ffffdd; 
+              border-width:3px; 
+              border-style:solid; 
+              border-color:Gray; 
+              padding:3px; 
+              width:250px; 
+    }
+.bl {background: url(/images/topLeftCorner.gif) 0 100% no-repeat; width: 20em; padding:12px 0px}
+
+
+.clear {font-size: 1px; height: 1px}
+.input
+{border: 1px solid #6297BC; color :Blue }
+
+
+   

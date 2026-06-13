@@ -1,0 +1,103 @@
+<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="NewEMS.master.vb" Inherits="E_Management.NewEMS" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<%@ Register Assembly="CrystalDecisions.Web, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304"
+    Namespace="CrystalDecisions.Web" TagPrefix="CR" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+		<title>E-Management system</title>
+        <link rel="stylesheet" type="text/css" href="~/css/style.css" /> 
+        <link rel="stylesheet" type="text/css" href="~/css/stylesheet.css" />
+        <link href="~/Css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="~/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />                
+        <link href="~/fonts/antonio-exotic/stylesheet.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="~/Css/lightbox.min.css"/>        
+        <link href="~/Css/responsive.css" rel="stylesheet"/>
+        
+        <script src="~/js/jquery.min.js" type="text/javascript"></script>
+        <script src="~/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="~/js/lightbox-plus-jquery.min.js" type="text/javascript"></script>
+        <script src="~/js/instafeed.min.js" type="text/javascript"></script>
+        <script src="~/js/custom.js" type="text/javascript"></script>
+        
+        <meta http-equiv='refresh' content='1200;url=http://mmsbsql1/emgmt/SessionExpired.aspx'  />
+                      
+</head>
+<body style="font-size: 12pt">
+<form id="form1" runat="server">
+    <table width=100% style="font-size: 12pt;background-color: #000000">
+    <tr>
+        <th  style="text-align: left">
+        <span style="font-size: 14pt; color: #ffffff; font-family: Tahoma; background-color: #000000">
+            Maruwa Malaysia&nbsp; || &nbsp;e</span><span style="font-size: 14pt; font-family: Tahoma; color: white; background-color: black;">-Management
+            System</span></th>
+            <th>
+                <table style="width: 125px; text-align: center"  cellspacing=5>
+                    <tr>
+                        <td style="width: 100px">
+                            </td>
+                        <td style="width: 100px">
+        <asp:ImageButton ID="ImageButton1" runat="server" class="img-responsive" ImageUrl ="~/images/icons/leave.png" Height="50px" Width="50px" BorderStyle="Solid" ToolTip="Leave Application" CausesValidation="False" /></td>
+                        <td style="width: 100px">
+                            </td>
+                        <td style="width: 100px">
+        <asp:ImageButton
+            ID="ImageButton2" runat="server" class="img-responsive" ImageUrl="~/images/icons/gatepass.png" BorderStyle="Solid" Height="50px" Width="50px" ToolTip="Gatepass Application" CausesValidation="False"/></td>
+                        <td style="width: 100px">
+                            </td>
+                        <td style="width: 100px">
+        <asp:ImageButton
+                ID="ImageButton3" runat="server" class="img-responsive" ImageUrl="~/images/icons/clinic.png" BorderStyle="Solid" Height="50px" ToolTip="Clinic Pass Application" Width="50px" CausesValidation="False" /></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 100px">
+                        </td>
+                        <td style="width: 100px">
+                            <asp:LinkButton ID="LinkButton2" runat="server" ForeColor="White" CausesValidation="False">Leaveapp</asp:LinkButton></td>
+                        <td style="width: 100px">
+                        </td>
+                        <td style="width: 100px">
+                            <asp:LinkButton ID="LinkButton3" runat="server" ForeColor="White" CausesValidation="False">Gatepass</asp:LinkButton></td>
+                        <td style="width: 100px">
+                        </td>
+                        <td style="width: 100px">
+                            <asp:LinkButton ID="LinkButton4" runat="server" ForeColor="White" CausesValidation="False">Clinicpass</asp:LinkButton></td>
+                    </tr>
+                </table>
+            </th>
+    <th>
+        <asp:LinkButton ID="LinkButton1" runat="server" ForeColor="White" CausesValidation="False">Signout</asp:LinkButton></th>
+    </tr>
+    <tr>
+    <td colspan =3 valign=top bgcolor="#ffffff" style="height: 20px;vertical-align: top; text-align: left;">
+    <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" Width="100%" BackColor="#E0E0E0" Font-Size="11pt" Font-Bold="True" Font-Italic="False" StaticSubMenuIndent="5px" StaticTopSeparatorImageUrl="~/images/top_mid1.GIF" DynamicBottomSeparatorImageUrl="~/images/top_mid9.GIF" Font-Names="Calibri" Height="25px">
+                <StaticMenuStyle BorderStyle="None" BackColor="#E0E0E0" />
+                <StaticMenuItemStyle BorderStyle="None" />
+                <DynamicHoverStyle BackColor="#E0E0E0" Font-Italic="False" Font-Size="Medium" />
+                <DynamicMenuItemStyle BackColor="#E0E0E0" ForeColor="Black" VerticalPadding="1px" HorizontalPadding="2px" />
+                <DynamicMenuStyle BackColor="#E0E0E0" />
+            </asp:Menu>           &nbsp;&nbsp;
+    </td></tr>
+    </table>
+     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+
+    <table border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 85%; font-size: 10pt;">
+        <tr>
+          <td valign="top" style="height: 407px">          &nbsp;</td>
+            <td valign="top" style="vertical-align: top; text-align: left;height: 407px; background-color: white;" >
+                 <asp:ContentPlaceHolder ID="CPHApplication" runat="server">
+                    </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+    <table width=100% style="font-size: 12pt"  class="table table-bordered" >
+    <tr>
+    <td colspan="2" style="color:white;vertical-align: middle; height: 20%; text-align: center; background-color: black;">
+                    <b><span style="color: #ffffff">&copy; 2018 All right reserved. Designed by </span><a href="http://www.maruwa.com.my/" target="_blank"><span style="color: #ffffff">Maruwa Malaysia Sdn Bhd</span></a></b><span style="color: #ffffff"> </span>
+                </td>
+                </tr>
+                </table>
+</form>
+</body>
+</html>

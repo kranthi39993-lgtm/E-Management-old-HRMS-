@@ -1,0 +1,7 @@
+
+<asp:button skinid ="buttonskin" runat =server font-bold="true" BackColor="ActiveBorder" 
+BorderColor="Transparent"
+BorderStyle="Outset" />
+  <asp:Button skinid ="buttonskin1" runat="server" cursor:hand
+     BorderColor="DarkGray" BorderStyle="Solid" Font-Size="X-Small" />
+         

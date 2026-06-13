@@ -1,0 +1,3424 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+E-Management
+</name>
+</assembly>
+<members>
+<member name="M:E_Management.HODapproval.BindGrid">
+	<summary>
+ FOR EA/GM/MD APPROVAL
+ </summary>
+	<remarks></remarks>
+</member><member name="F:E_Management.Leavesummary.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.Leavesummary.CrystalReportViewer1">
+	<summary>
+CrystalReportViewer1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.Leavesummary.CrystalReportSource1">
+	<summary>
+CrystalReportSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.Leavesummary">
+	<summary>
+Leavesummary class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.leave_overall1.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.leave_overall1.CrystalReportViewer1">
+	<summary>
+CrystalReportViewer1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.leave_overall1.CrystalReportSource1">
+	<summary>
+CrystalReportSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.leave_overall1">
+	<summary>
+leave_overall1 class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.year">
+	<summary>
+year control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.RequiredFieldValidator3">
+	<summary>
+RequiredFieldValidator3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.Label7">
+	<summary>
+Label7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.month">
+	<summary>
+month control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.RequiredFieldValidator1">
+	<summary>
+RequiredFieldValidator1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.Label3">
+	<summary>
+Label3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.labname">
+	<summary>
+labname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.RequiredFieldValidator4">
+	<summary>
+RequiredFieldValidator4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.Label8">
+	<summary>
+Label8 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.samptyp">
+	<summary>
+samptyp control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.RequiredFieldValidator2">
+	<summary>
+RequiredFieldValidator2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.Label4">
+	<summary>
+Label4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.labno">
+	<summary>
+labno control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.RequiredFieldValidator5">
+	<summary>
+RequiredFieldValidator5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.Label13">
+	<summary>
+Label13 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.samptkn">
+	<summary>
+samptkn control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.RequiredFieldValidator12">
+	<summary>
+RequiredFieldValidator12 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.Label5">
+	<summary>
+Label5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.hrs">
+	<summary>
+hrs control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.mins">
+	<summary>
+mins control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.am">
+	<summary>
+am control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.RegularExpressionValidator1">
+	<summary>
+RegularExpressionValidator1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.RegularExpressionValidator2">
+	<summary>
+RegularExpressionValidator2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.Label14">
+	<summary>
+Label14 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.tknby">
+	<summary>
+tknby control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.RequiredFieldValidator13">
+	<summary>
+RequiredFieldValidator13 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.Label6">
+	<summary>
+Label6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.wwtpno">
+	<summary>
+wwtpno control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.RequiredFieldValidator6">
+	<summary>
+RequiredFieldValidator6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.Label15">
+	<summary>
+Label15 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.myfile">
+	<summary>
+myfile control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.CalendarExtender1">
+	<summary>
+CalendarExtender1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.R1">
+	<summary>
+R1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.RequiredFieldValidator21">
+	<summary>
+RequiredFieldValidator21 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.R2">
+	<summary>
+R2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.RequiredFieldValidator22">
+	<summary>
+RequiredFieldValidator22 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.R3">
+	<summary>
+R3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.RequiredFieldValidator23">
+	<summary>
+RequiredFieldValidator23 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.R4">
+	<summary>
+R4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.RequiredFieldValidator24">
+	<summary>
+RequiredFieldValidator24 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.R5">
+	<summary>
+R5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.RequiredFieldValidator25">
+	<summary>
+RequiredFieldValidator25 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.R6">
+	<summary>
+R6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.RequiredFieldValidator26">
+	<summary>
+RequiredFieldValidator26 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.R7">
+	<summary>
+R7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.RequiredFieldValidator27">
+	<summary>
+RequiredFieldValidator27 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.R8">
+	<summary>
+R8 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.RequiredFieldValidator28">
+	<summary>
+RequiredFieldValidator28 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.R9">
+	<summary>
+R9 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.RequiredFieldValidator29">
+	<summary>
+RequiredFieldValidator29 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.R10">
+	<summary>
+R10 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.RequiredFieldValidator30">
+	<summary>
+RequiredFieldValidator30 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.R11">
+	<summary>
+R11 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.RequiredFieldValidator31">
+	<summary>
+RequiredFieldValidator31 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.R12">
+	<summary>
+R12 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.RequiredFieldValidator32">
+	<summary>
+RequiredFieldValidator32 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.R13">
+	<summary>
+R13 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.RequiredFieldValidator33">
+	<summary>
+RequiredFieldValidator33 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.R14">
+	<summary>
+R14 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.RequiredFieldValidator34">
+	<summary>
+RequiredFieldValidator34 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.R15">
+	<summary>
+R15 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.RequiredFieldValidator35">
+	<summary>
+RequiredFieldValidator35 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.R16">
+	<summary>
+R16 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.RequiredFieldValidator36">
+	<summary>
+RequiredFieldValidator36 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.R17">
+	<summary>
+R17 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.RequiredFieldValidator37">
+	<summary>
+RequiredFieldValidator37 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.R18">
+	<summary>
+R18 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.RequiredFieldValidator38">
+	<summary>
+RequiredFieldValidator38 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.R19">
+	<summary>
+R19 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.RequiredFieldValidator39">
+	<summary>
+RequiredFieldValidator39 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.R20">
+	<summary>
+R20 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.RequiredFieldValidator40">
+	<summary>
+RequiredFieldValidator40 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.R21">
+	<summary>
+R21 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.RequiredFieldValidator41">
+	<summary>
+RequiredFieldValidator41 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.R22">
+	<summary>
+R22 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.RequiredFieldValidator42">
+	<summary>
+RequiredFieldValidator42 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.SAVEWWT">
+	<summary>
+SAVEWWT control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.BACKWWT">
+	<summary>
+BACKWWT control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.lblmsg">
+	<summary>
+lblmsg control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.WWTPlabTestEntry.SqlDataSource1">
+	<summary>
+SqlDataSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.WWTPlabTestEntry">
+	<summary>
+WWTPlabTestEntry class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="T:E_Management.Logout">
+	<summary>
+Logout class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.CrvGpDept.Head1">
+	<summary>
+Head1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.CrvGpDept.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.CrvGpDept.CrystalReportViewer1">
+	<summary>
+CrystalReportViewer1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.CrvGpDept.CrystalReportSource1">
+	<summary>
+CrystalReportSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.CrvGpDept">
+	<summary>
+CrvGpDept class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.frmEmpRolesNRightsbyMod.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRolesNRightsbyMod.Td1">
+	<summary>
+Td1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRolesNRightsbyMod.LblMsg">
+	<summary>
+LblMsg control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRolesNRightsbyMod.Td2">
+	<summary>
+Td2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRolesNRightsbyMod.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRolesNRightsbyMod.Td3">
+	<summary>
+Td3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRolesNRightsbyMod.Label3">
+	<summary>
+Label3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRolesNRightsbyMod.Label4">
+	<summary>
+Label4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRolesNRightsbyMod.Label5">
+	<summary>
+Label5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRolesNRightsbyMod.TxtBoxEmpCode">
+	<summary>
+TxtBoxEmpCode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRolesNRightsbyMod.Label6">
+	<summary>
+Label6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRolesNRightsbyMod.Label7">
+	<summary>
+Label7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRolesNRightsbyMod.DropDownList1">
+	<summary>
+DropDownList1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRolesNRightsbyMod.SqlDataSource1">
+	<summary>
+SqlDataSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRolesNRightsbyMod.Label8">
+	<summary>
+Label8 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRolesNRightsbyMod.DropDownList2">
+	<summary>
+DropDownList2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRolesNRightsbyMod.SqlDataSource4">
+	<summary>
+SqlDataSource4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRolesNRightsbyMod.GridView2">
+	<summary>
+GridView2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRolesNRightsbyMod.SqlDataSource2">
+	<summary>
+SqlDataSource2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRolesNRightsbyMod.CheckBoxList1">
+	<summary>
+CheckBoxList1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRolesNRightsbyMod.SqlDataSource3">
+	<summary>
+SqlDataSource3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRolesNRightsbyMod.BtnSave">
+	<summary>
+BtnSave control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.frmEmpRolesNRightsbyMod">
+	<summary>
+frmEmpRolesNRightsbyMod class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.RptEmpRolesFrm.CrystalReportViewer1">
+	<summary>
+CrystalReportViewer1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.RptEmpRolesFrm.CrystalReportSource1">
+	<summary>
+CrystalReportSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.RptEmpRolesFrm">
+	<summary>
+RptEmpRolesFrm class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.overallleavesummary1.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.overallleavesummary1.CrystalReportViewer1">
+	<summary>
+CrystalReportViewer1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.overallleavesummary1.CrystalReportSource1">
+	<summary>
+CrystalReportSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.overallleavesummary1">
+	<summary>
+overallleavesummary1 class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="T:E_Management.ButonBacklLibrary.MyBackButton">
+	<summary>
+ Summary description for MyBackButton.
+ </summary>
+</member><member name="F:E_Management.frmRolesNRights.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmRolesNRights.Td1">
+	<summary>
+Td1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmRolesNRights.LblMsg">
+	<summary>
+LblMsg control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmRolesNRights.Td2">
+	<summary>
+Td2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmRolesNRights.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmRolesNRights.Td3">
+	<summary>
+Td3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmRolesNRights.Label3">
+	<summary>
+Label3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmRolesNRights.Label4">
+	<summary>
+Label4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmRolesNRights.GridView1">
+	<summary>
+GridView1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmRolesNRights.SqlDataSource1">
+	<summary>
+SqlDataSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmRolesNRights.GridView2">
+	<summary>
+GridView2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmRolesNRights.SqlDataSource2">
+	<summary>
+SqlDataSource2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmRolesNRights.CheckBoxList1">
+	<summary>
+CheckBoxList1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmRolesNRights.SqlDataSource3">
+	<summary>
+SqlDataSource3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmRolesNRights.BtnSave">
+	<summary>
+BtnSave control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.frmRolesNRights">
+	<summary>
+frmRolesNRights class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.frmScrType.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmScrType.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmScrType.TxtBoxScrType">
+	<summary>
+TxtBoxScrType control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmScrType.Label3">
+	<summary>
+Label3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmScrType.TxtBoxScrTypeDesc">
+	<summary>
+TxtBoxScrTypeDesc control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmScrType.BtnSave">
+	<summary>
+BtnSave control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmScrType.Td1">
+	<summary>
+Td1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmScrType.LblMsg">
+	<summary>
+LblMsg control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmScrType.GridView1">
+	<summary>
+GridView1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmScrType.SqlDataSource1">
+	<summary>
+SqlDataSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.frmScrType">
+	<summary>
+frmScrType class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.RptCompaniesFrm.CrystalReportViewer1">
+	<summary>
+CrystalReportViewer1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.RptCompaniesFrm.CrystalReportSource1">
+	<summary>
+CrystalReportSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.RptCompaniesFrm">
+	<summary>
+RptCompaniesFrm class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.RptRolesRightsFrm.CrystalReportViewer1">
+	<summary>
+CrystalReportViewer1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.RptRolesRightsFrm.CrystalReportSource1">
+	<summary>
+CrystalReportSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.RptRolesRightsFrm">
+	<summary>
+RptRolesRightsFrm class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.sectrpt.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.sectrpt.CrystalReportViewer3">
+	<summary>
+CrystalReportViewer3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.sectrpt.CrystalReportSource3">
+	<summary>
+CrystalReportSource3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.sectrpt">
+	<summary>
+sectrpt class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.frmFristWelcome.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmFristWelcome.Image1">
+	<summary>
+Image1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.frmFristWelcome">
+	<summary>
+frmFristWelcome class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.crvGpall.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.crvGpall.CrystalReportViewer1">
+	<summary>
+CrystalReportViewer1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.crvGpall.CrystalReportSource1">
+	<summary>
+CrystalReportSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.crvGpall">
+	<summary>
+crvGpall class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.CrvGpDesig.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.CrvGpDesig.CrystalReportViewer1">
+	<summary>
+CrystalReportViewer1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.CrvGpDesig.CrystalReportSource1">
+	<summary>
+CrystalReportSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.CrvGpDesig">
+	<summary>
+CrvGpDesig class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.Leave_Sectall.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.Leave_Sectall.CrystalReportViewer1">
+	<summary>
+CrystalReportViewer1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.Leave_Sectall.CrystalReportSource1">
+	<summary>
+CrystalReportSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.Leave_Sectall">
+	<summary>
+Leave_Sectall class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.rightssettingforallemp.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.rightssettingforallemp.Button1">
+	<summary>
+Button1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.rightssettingforallemp">
+	<summary>
+rightssettingforallemp class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.QuoteMaster.Enq">
+   Protected WithEvents ltlAlert As System.Web.UI.WebControls.Literal   '''
+
+</member><member name="F:E_Management.frmEmpRoles.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRoles.Td1">
+	<summary>
+Td1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRoles.LblMsg">
+	<summary>
+LblMsg control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRoles.Td2">
+	<summary>
+Td2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRoles.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRoles.Td3">
+	<summary>
+Td3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRoles.Label3">
+	<summary>
+Label3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRoles.Label4">
+	<summary>
+Label4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRoles.Label5">
+	<summary>
+Label5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRoles.TxtBoxEmpCode">
+	<summary>
+TxtBoxEmpCode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRoles.Label6">
+	<summary>
+Label6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRoles.Label7">
+	<summary>
+Label7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRoles.DropDownList1">
+	<summary>
+DropDownList1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRoles.SqlDataSource1">
+	<summary>
+SqlDataSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRoles.Label8">
+	<summary>
+Label8 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRoles.DropDownList2">
+	<summary>
+DropDownList2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRoles.SqlDataSource4">
+	<summary>
+SqlDataSource4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRoles.Label9">
+	<summary>
+Label9 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRoles.Label10">
+	<summary>
+Label10 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRoles.DropDownList3">
+	<summary>
+DropDownList3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRoles.SqlDataSource3">
+	<summary>
+SqlDataSource3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRoles.GridView1">
+	<summary>
+GridView1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRoles.SqlDataSource2">
+	<summary>
+SqlDataSource2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmEmpRoles.BtnSave">
+	<summary>
+BtnSave control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.frmEmpRoles">
+	<summary>
+frmEmpRoles class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.DESIGNATIONRPT.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.DESIGNATIONRPT.CrystalReportViewer2">
+	<summary>
+CrystalReportViewer2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.DESIGNATIONRPT.CrystalReportSource2">
+	<summary>
+CrystalReportSource2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.DESIGNATIONRPT">
+	<summary>
+DESIGNATIONRPT class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.year">
+	<summary>
+year control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.RequiredFieldValidator1">
+	<summary>
+RequiredFieldValidator1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.Label14">
+	<summary>
+Label14 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.month">
+	<summary>
+month control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.RequiredFieldValidator2">
+	<summary>
+RequiredFieldValidator2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.Label3">
+	<summary>
+Label3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.disptype">
+	<summary>
+disptype control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.RequiredFieldValidator3">
+	<summary>
+RequiredFieldValidator3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.Label15">
+	<summary>
+Label15 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.sludgecat">
+	<summary>
+sludgecat control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.RequiredFieldValidator4">
+	<summary>
+RequiredFieldValidator4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.Label4">
+	<summary>
+Label4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.dept">
+	<summary>
+dept control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.RequiredFieldValidator5">
+	<summary>
+RequiredFieldValidator5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.Label16">
+	<summary>
+Label16 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.sect">
+	<summary>
+sect control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.RequiredFieldValidator6">
+	<summary>
+RequiredFieldValidator6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.Label5">
+	<summary>
+Label5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.rawmtl">
+	<summary>
+rawmtl control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.RequiredFieldValidator7">
+	<summary>
+RequiredFieldValidator7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.RegularExpressionValidator15">
+	<summary>
+RegularExpressionValidator15 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.Label17">
+	<summary>
+Label17 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.prdqty">
+	<summary>
+prdqty control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.RequiredFieldValidator8">
+	<summary>
+RequiredFieldValidator8 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.RegularExpressionValidator16">
+	<summary>
+RegularExpressionValidator16 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.Label6">
+	<summary>
+Label6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.dispqty">
+	<summary>
+dispqty control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.RequiredFieldValidator9">
+	<summary>
+RequiredFieldValidator9 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.RegularExpressionValidator14">
+	<summary>
+RegularExpressionValidator14 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.Label18">
+	<summary>
+Label18 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.uom">
+	<summary>
+uom control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.RequiredFieldValidator10">
+	<summary>
+RequiredFieldValidator10 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.Label7">
+	<summary>
+Label7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.price">
+	<summary>
+price control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.RequiredFieldValidator11">
+	<summary>
+RequiredFieldValidator11 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.RegularExpressionValidator12">
+	<summary>
+RegularExpressionValidator12 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.Label19">
+	<summary>
+Label19 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.dispmode">
+	<summary>
+dispmode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.RequiredFieldValidator13">
+	<summary>
+RequiredFieldValidator13 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.SAVESI">
+	<summary>
+SAVESI control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.Button2">
+	<summary>
+Button2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.lblmsg">
+	<summary>
+lblmsg control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.SqlDataSource2">
+	<summary>
+SqlDataSource2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.SqlDataSource3">
+	<summary>
+SqlDataSource3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.SqlDataSource4">
+	<summary>
+SqlDataSource4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.SludgeInventory.SqlDataSource1">
+	<summary>
+SqlDataSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.SludgeInventory">
+	<summary>
+SludgeInventory class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.frmSendSMS.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSendSMS.Td1">
+	<summary>
+Td1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSendSMS.LblMsg">
+	<summary>
+LblMsg control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSendSMS.Td4">
+	<summary>
+Td4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSendSMS.Label4">
+	<summary>
+Label4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSendSMS.TxtBoxMessage">
+	<summary>
+TxtBoxMessage control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSendSMS.Td5">
+	<summary>
+Td5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSendSMS.Label3">
+	<summary>
+Label3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSendSMS.GridView2">
+	<summary>
+GridView2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSendSMS.SqlDataSource1">
+	<summary>
+SqlDataSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSendSMS.BtnSave">
+	<summary>
+BtnSave control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.frmSendSMS">
+	<summary>
+frmSendSMS class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.RptSMSgrpFrm.CrystalReportViewer1">
+	<summary>
+CrystalReportViewer1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.RptSMSgrpFrm.CrystalReportSource1">
+	<summary>
+CrystalReportSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.RptSMSgrpFrm">
+	<summary>
+RptSMSgrpFrm class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.frmSetScreen.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSetScreen.Label4">
+	<summary>
+Label4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSetScreen.DrpDwnSystem">
+	<summary>
+DrpDwnSystem control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSetScreen.SqlDataSource2">
+	<summary>
+SqlDataSource2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSetScreen.Label5">
+	<summary>
+Label5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSetScreen.DrpdwnModule">
+	<summary>
+DrpdwnModule control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSetScreen.SqlDataSource3">
+	<summary>
+SqlDataSource3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSetScreen.Label6">
+	<summary>
+Label6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSetScreen.DrpDwnScrtype">
+	<summary>
+DrpDwnScrtype control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSetScreen.SqlDataSource4">
+	<summary>
+SqlDataSource4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSetScreen.Label8">
+	<summary>
+Label8 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSetScreen.TxtBoxScreenName">
+	<summary>
+TxtBoxScreenName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSetScreen.Label3">
+	<summary>
+Label3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSetScreen.FileUpload1">
+	<summary>
+FileUpload1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSetScreen.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSetScreen.TxtBoxString">
+	<summary>
+TxtBoxString control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSetScreen.Label9">
+	<summary>
+Label9 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSetScreen.TxtBoxScrDesc">
+	<summary>
+TxtBoxScrDesc control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSetScreen.Label7">
+	<summary>
+Label7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSetScreen.TxtBoxPanel">
+	<summary>
+TxtBoxPanel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSetScreen.BtnSave">
+	<summary>
+BtnSave control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSetScreen.Td1">
+	<summary>
+Td1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSetScreen.LblMsg">
+	<summary>
+LblMsg control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSetScreen.GridView1">
+	<summary>
+GridView1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSetScreen.SqlDataSource1">
+	<summary>
+SqlDataSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.frmSetScreen">
+	<summary>
+frmSetScreen class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.RptRolesFrm.CrystalReportViewer1">
+	<summary>
+CrystalReportViewer1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.RptRolesFrm.CrystalReportSource1">
+	<summary>
+CrystalReportSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.RptRolesFrm">
+	<summary>
+RptRolesFrm class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.Cpreports.CrystalReportViewer1">
+	<summary>
+CrystalReportViewer1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.Cpreports.CrystalReportSource1">
+	<summary>
+CrystalReportSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.Cpreports">
+	<summary>
+Cpreports class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.frmSMSgrpReg.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSMSgrpReg.Td1">
+	<summary>
+Td1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSMSgrpReg.LblMsg">
+	<summary>
+LblMsg control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSMSgrpReg.Td4">
+	<summary>
+Td4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSMSgrpReg.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSMSgrpReg.DropDownList1">
+	<summary>
+DropDownList1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSMSgrpReg.SqlDataSource1">
+	<summary>
+SqlDataSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSMSgrpReg.Label4">
+	<summary>
+Label4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSMSgrpReg.TxtBoxGrpName">
+	<summary>
+TxtBoxGrpName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSMSgrpReg.Td5">
+	<summary>
+Td5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSMSgrpReg.Label6">
+	<summary>
+Label6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSMSgrpReg.TxtBoxMobileNo">
+	<summary>
+TxtBoxMobileNo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSMSgrpReg.Label5">
+	<summary>
+Label5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSMSgrpReg.Td6">
+	<summary>
+Td6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSMSgrpReg.Label7">
+	<summary>
+Label7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSMSgrpReg.TxtEmpCode">
+	<summary>
+TxtEmpCode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSMSgrpReg.BtnSave">
+	<summary>
+BtnSave control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSMSgrpReg.LblEmpName">
+	<summary>
+LblEmpName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSMSgrpReg.Td2">
+	<summary>
+Td2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSMSgrpReg.Label3">
+	<summary>
+Label3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSMSgrpReg.GridView2">
+	<summary>
+GridView2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSMSgrpReg.Button1">
+	<summary>
+Button1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.frmSMSgrpReg">
+	<summary>
+frmSMSgrpReg class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.QuoteRevision.Enq">
+   Protected WithEvents ltlAlert As System.Web.UI.WebControls.Literal   '''
+
+</member><member name="F:E_Management.cvGpSect.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.cvGpSect.CrystalReportViewer1">
+	<summary>
+CrystalReportViewer1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.cvGpSect.CrystalReportSource1">
+	<summary>
+CrystalReportSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.cvGpSect">
+	<summary>
+cvGpSect class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.leave_designation.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.leave_designation.Button1">
+	<summary>
+Button1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.leave_designation.CrystalReportViewer1">
+	<summary>
+CrystalReportViewer1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.leave_designation.CrystalReportSource1">
+	<summary>
+CrystalReportSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.leave_designation">
+	<summary>
+leave_designation class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.QuoteEdit.Enq">
+   Protected WithEvents ltlAlert As System.Web.UI.WebControls.Literal   '''
+
+</member><member name="F:E_Management.RptModulesFrm.CrystalReportViewer1">
+	<summary>
+CrystalReportViewer1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.RptModulesFrm.CrystalReportSource1">
+	<summary>
+CrystalReportSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.RptModulesFrm">
+	<summary>
+RptModulesFrm class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.deptrpt.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.deptrpt.CrystalReportViewer1">
+	<summary>
+CrystalReportViewer1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.deptrpt.CrystalReportSource1">
+	<summary>
+CrystalReportSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.deptrpt">
+	<summary>
+deptrpt class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.crvCsall.Head1">
+	<summary>
+Head1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.crvCsall.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.crvCsall.CrystalReportViewer1">
+	<summary>
+CrystalReportViewer1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.crvCsall.CrystalReportSource1">
+	<summary>
+CrystalReportSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.crvCsall">
+	<summary>
+crvCsall class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.leaveentitilement1.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.leaveentitilement1.CrystalReportViewer1">
+	<summary>
+CrystalReportViewer1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.leaveentitilement1.CrystalReportSource1">
+	<summary>
+CrystalReportSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.leaveentitilement1">
+	<summary>
+leaveentitilement1 class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.frmSystems.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSystems.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSystems.TxtBoxSystem">
+	<summary>
+TxtBoxSystem control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSystems.Label3">
+	<summary>
+Label3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSystems.TxtBoxSystemDesc">
+	<summary>
+TxtBoxSystemDesc control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSystems.BtnSave">
+	<summary>
+BtnSave control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSystems.Td1">
+	<summary>
+Td1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSystems.LblMsg">
+	<summary>
+LblMsg control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSystems.GridView1">
+	<summary>
+GridView1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmSystems.SqlDataSource1">
+	<summary>
+SqlDataSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.frmSystems">
+	<summary>
+frmSystems class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.Leave_all1.CrystalReportViewer1">
+	<summary>
+CrystalReportViewer1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.Leave_all1.CrystalReportSource1">
+	<summary>
+CrystalReportSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.Leave_all1">
+	<summary>
+Leave_all1 class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.RptCompanySysFrm.CrystalReportViewer1">
+	<summary>
+CrystalReportViewer1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.RptCompanySysFrm.CrystalReportSource1">
+	<summary>
+CrystalReportSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.RptCompanySysFrm">
+	<summary>
+RptCompanySysFrm class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.leave_hod_emp1.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.leave_hod_emp1.CrystalReportViewer1">
+	<summary>
+CrystalReportViewer1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.leave_hod_emp1.CrystalReportSource1">
+	<summary>
+CrystalReportSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.leave_hod_emp1">
+	<summary>
+leave_hod_emp1 class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="M:E_Management.ems.Getdlevel">
+	<summary>
+ APPRAISAL CODING FOR ALERT STARTS HERE
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:E_Management.ems.InsertAppraisalData">
+	<summary>
+ GET PROBATION EXPIRY DETAILS
+ </summary>
+	<remarks></remarks>
+</member><member name="F:E_Management.frmModules.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmModules.Label4">
+	<summary>
+Label4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmModules.DrpDwnSystem">
+	<summary>
+DrpDwnSystem control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmModules.SqlDataSource2">
+	<summary>
+SqlDataSource2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmModules.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmModules.TxtBoxModule">
+	<summary>
+TxtBoxModule control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmModules.Label3">
+	<summary>
+Label3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmModules.TxtBoxModuleDesc">
+	<summary>
+TxtBoxModuleDesc control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmModules.BtnSave">
+	<summary>
+BtnSave control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmModules.Td1">
+	<summary>
+Td1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmModules.LblMsg">
+	<summary>
+LblMsg control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmModules.GridView1">
+	<summary>
+GridView1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmModules.SqlDataSource1">
+	<summary>
+SqlDataSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.frmModules">
+	<summary>
+frmModules class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.RptScreensFrm.CrystalReportViewer1">
+	<summary>
+CrystalReportViewer1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.RptScreensFrm.CrystalReportSource1">
+	<summary>
+CrystalReportSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.RptScreensFrm">
+	<summary>
+RptScreensFrm class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.frmMMchPwd.TxtPwd">
+	<summary>
+TxtPwd control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmMMchPwd.TxtCPwd">
+	<summary>
+TxtCPwd control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmMMchPwd.BtnLogin">
+	<summary>
+BtnLogin control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmMMchPwd.LblMsg">
+	<summary>
+LblMsg control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.frmMMchPwd">
+	<summary>
+frmMMchPwd class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="P:E_Management.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:E_Management.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:E_Management.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="F:E_Management.frmRoles.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmRoles.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmRoles.TxtBoxRole">
+	<summary>
+TxtBoxRole control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmRoles.Label3">
+	<summary>
+Label3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmRoles.TxtBoxRoleDesc">
+	<summary>
+TxtBoxRoleDesc control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmRoles.BtnSave">
+	<summary>
+BtnSave control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmRoles.Td1">
+	<summary>
+Td1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmRoles.LblMsg">
+	<summary>
+LblMsg control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmRoles.GridView1">
+	<summary>
+GridView1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.frmRoles.SqlDataSource1">
+	<summary>
+SqlDataSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.frmRoles">
+	<summary>
+frmRoles class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.Leave_empr.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.Leave_empr.CrystalReportViewer1">
+	<summary>
+CrystalReportViewer1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.Leave_empr.CrystalReportSource1">
+	<summary>
+CrystalReportSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.Leave_empr">
+	<summary>
+Leave_empr class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.leave_hod_sect.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.leave_hod_sect.CrystalReportViewer1">
+	<summary>
+CrystalReportViewer1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.leave_hod_sect.CrystalReportSource2">
+	<summary>
+CrystalReportSource2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.leave_hod_sect.CrystalReportSource1">
+	<summary>
+CrystalReportSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.leave_hod_sect">
+	<summary>
+leave_hod_sect class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.crvGPEmp.Head1">
+	<summary>
+Head1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.crvGPEmp.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.crvGPEmp.CrystalReportViewer1">
+	<summary>
+CrystalReportViewer1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.crvGPEmp.CrystalReportSource1">
+	<summary>
+CrystalReportSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.crvGPEmp">
+	<summary>
+crvGPEmp class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:E_Management.leave_hod_all1.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.leave_hod_all1.CrystalReportViewer1">
+	<summary>
+CrystalReportViewer1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:E_Management.leave_hod_all1.CrystalReportSource1">
+	<summary>
+CrystalReportSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:E_Management.leave_hod_all1">
+	<summary>
+leave_hod_all1 class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member>
+</members>
+</doc>

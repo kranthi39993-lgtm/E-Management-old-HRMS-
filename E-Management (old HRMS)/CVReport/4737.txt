@@ -1,0 +1,55 @@
+Meeting start at 1:00pm
+Attendee :
+Panasonic: Mr Yoshida, Mr Okui, Mr Ueno, Mr Tzunezaki, Mr Ymaguchi, Mr Yoshida (Purchaser)
+MM: Mr Siva, Mr Inagaki, Mr Matsumoto
+
+Topic for discussion
+a. 10PKB - Thickness abnormal
+b. May/9 Telephone meeting follow up
+c. Disposition of chip on hold at Panasonic
+d. Audit agenda on 5/23¬5/24
+e. 2019 Master plan progress
+
+ALT10PKB (6G) - Thickness report
+Commnet from Panasonic
+a. FTA for thickness - request MM to review back all the previous accourence thickness FTA and summarize before conclusing for the occurence cause
+b. Pamasonic will support on MM on the sensor implementation - during visit on 05/23
+c. Current MM focusing only at casting process for thickness failure, Pansonic requesting MM to confirm on other process as well
+d. All action item need to mention the purpose whether is for thickness small or big - report content
+e. MM explain to scrap the coils with NG values during label generation but Panasonic wants MM to understand the occurence of the NG measurement whether is from the coil or other factors. Scrapping coil is not a wise move but aceptable as for temporary measure. Explained that this is a temporary action to shut down the thickness claim and will look into the occurence before scrapping the coil
+f. Panasonic advice ==> making the rule and implementting the rule is important
+
+Chip On-Hold Status
+Total qty : 6,105,947 (Sampling judgement)
+Effected lot : 809,216 (Need to 100%)
+a. MM need to make judgement whether to
+	i. Sorting by sending manpower
+	ii. Scrap the product
+The calculation a will be submitted to Panasonic by 05/21
+
+Master Plan - Findings  comment
+a. Master plan trend comparison from 2017 to date. Currently only showing for 2018
+b. MM to highlight which claim can be close and need to continue. Panasonic request MM to eliminate thickness & mix rank claims (Target 0 cases)
+c. Panasonic would like to work together with MM to solve the claims thru the MASTER PLAN projects. Communication need to be establish between both company and activity to be follow up
+d. Separate the mix claim whether is by human or machineries
+e. MM action need to focus more towars the occurence reason in order to stop the repeating
+f. MM need to explain OCAP to Mr Tsunezaki since he is incharge of OCAP for Panasonic. 
+g. 1 lot/1 desk system is good but need also DO & CHECK to ensure the system run as per required
+h. Master plan will be review by End/Jun19 and decide on the next direction for July ¬ Dec'19
+
+Visit Agenda by 
+a. Mr Tsunezaki - Chief Quality Assurance Departmet
+b. Mr Yamaguchi - Manager Production Engineering Group
+
+1. Production condition - Actual running method
+2. Review sensors implementation for Casting & Press 
+2. OCAP implementation
+3. Master Plan - Progress status review
+4. Briefing to key stuff for OCAP implemnetation in PANASONIC
+
+Meeting adjourned at 4:30pm
+
+Regards
+
+
+  
