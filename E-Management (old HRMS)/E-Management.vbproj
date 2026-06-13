@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -10,6 +10,14 @@
     <OutputType>Library</OutputType>
     <RootNamespace>E_Management</RootNamespace>
     <AssemblyName>E-Management</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -19,6 +27,17 @@
     <OutputPath>bin\</OutputPath>
     <DocumentationFile>E-Management.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PublishDatabaseSettings>
+      <Objects>
+        <ObjectGroup Name="EMSConnection-Deployment" Order="2">
+          <Destination Path="" />
+          <Object Type="DbFullSql">
+            <PreSource Path="Data Source=localhost%3bInitial Catalog=EMS%3bUser ID=sa%3bPassword=password" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Debug\AutoScripts\EMSConnection-Deployment_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+      </Objects>
+    </PublishDatabaseSettings>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -79,6 +98,573 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit.sln" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Accordion\Accordion.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Accordion\Accordion.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Accordion\AccordionBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Accordion\AccordionCommandEventArgs.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Accordion\AccordionContentPanel.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Accordion\AccordionDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Accordion\AccordionExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Accordion\AccordionExtenderDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Accordion\AccordionItemEvent.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Accordion\AccordionItemType.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Accordion\AccordionPane.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Accordion\AccordionPaneCollection.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Accordion\AutoSize.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\AlwaysVisibleControl\AlwaysVisible.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\AlwaysVisibleControl\AlwaysVisibleControlBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\AlwaysVisibleControl\AlwaysVisibleControlDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\AlwaysVisibleControl\AlwaysVisibleControlExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\AlwaysVisibleControl\HorizontalSide.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\AlwaysVisibleControl\VerticalSide.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Animation\Animation.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Animation\Animation.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Animation\AnimationBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Animation\AnimationExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Animation\AnimationExtenderDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Animation\AnimationJavaScriptConverter.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Animation\Animations.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Animation\AnimationScripts.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\AutoComplete\AutoComplete.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\AutoComplete\AutoCompleteBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\AutoComplete\AutoCompleteDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\AutoComplete\AutoCompleteExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Calendar\arrow-left.gif" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Calendar\arrow-right.gif" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Calendar\Calendar.css" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Calendar\Calendar.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Calendar\CalendarBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Calendar\CalendarDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Calendar\CalendarExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Calendar\CalendarPosition.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\CascadingDropDown\CascadingDropDown.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\CascadingDropDown\CascadingDropDownBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\CascadingDropDown\CascadingDropDownDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\CascadingDropDown\CascadingDropDownExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\CascadingDropDown\CascadingDropDownNameValue.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\CollapsiblePanel\CollapsiblePanel.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\CollapsiblePanel\CollapsiblePanelBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\CollapsiblePanel\CollapsiblePanelDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\CollapsiblePanel\CollapsiblePanelExpandDirection.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\CollapsiblePanel\CollapsiblePanelExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Common\BoxSide.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Common\Common.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Common\CommonToolkitScripts.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Common\DateTime.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Common\DateTimeScripts.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Common\Input.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Common\InputScripts.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Common\Threading.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Common\ThreadingScripts.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Common\Utility.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Compat\DragDrop\DragDropScripts.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Compat\DragDrop\DragDropScripts.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Compat\Timer\Timer.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Compat\Timer\TimerScript.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ConfirmButton\ConfirmButton.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ConfirmButton\confirmButtonBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ConfirmButton\confirmButtonDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ConfirmButton\confirmButtonExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\DragPanel\DragPanel.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\DragPanel\DragPanelDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\DragPanel\DragPanelExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\DragPanel\FloatingBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\DropDown\drop-arrow.gif" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\DropDown\DropDown.css" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\DropDown\DropDown.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\DropDown\DropDownBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\DropDown\DropDownDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\DropDown\DropDownExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\DropShadow\DropShadow.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\DropShadow\DropShadowBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\DropShadow\DropShadowDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\DropShadow\DropShadowExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\DynamicPopulate\DynamicPopulate.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\DynamicPopulate\DynamicPopulateBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\DynamicPopulate\DynamicPopulateDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\DynamicPopulate\DynamicPopulateExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ExtenderBase\AnimationExtenderControlBase.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ExtenderBase\BaseScripts.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ExtenderBase\ClientCssResourceAttribute.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ExtenderBase\ClientPropertyNameAttribute.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ExtenderBase\ClientScriptResourceAttribute.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ExtenderBase\ComponentReferenceAttribute.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ExtenderBase\Constants.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ExtenderBase\Design\ExtendedTypeDescriptionProvider.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ExtenderBase\Design\ExtenderBaseDesignerHelpers.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ExtenderBase\Design\ExtenderControlBaseDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ExtenderBase\Design\ExtenderControlBaseDesigner.PageMethodSignatures.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ExtenderBase\Design\ExternalReferences.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ExtenderBase\Design\PageMethodSignatureAttribute.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ExtenderBase\Design\TypeControlIDConverter.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ExtenderBase\DynamicPopulateExtenderControlBase.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ExtenderBase\ElementReferenceAttribute.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ExtenderBase\ExtenderControlBase.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ExtenderBase\ExtenderControlEventAttribute.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ExtenderBase\ExtenderControlMethodAttribute.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ExtenderBase\ExtenderControlPropertyAttribute.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ExtenderBase\IClientStateManager.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ExtenderBase\IControlResolver.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ExtenderBase\ProfilePropertyBinding.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ExtenderBase\ProfilePropertyBindingCollection.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ExtenderBase\RequiredPropertyAttribute.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ExtenderBase\RequiredScriptAttribute.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ExtenderBase\ResolveControlEventArgs.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ExtenderBase\ResolveControlEventHandler.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ExtenderBase\ScriptControlBase.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ExtenderBase\ScriptObjectBuilder.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ExtenderBase\ScriptUserControl.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ExtenderBase\ServicePathConverter.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\FilteredTextBox\FilteredTextBox.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\FilteredTextBox\FilteredTextBoxBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\FilteredTextBox\FilteredTextBoxDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\FilteredTextBox\FilteredTextBoxExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\FilteredTextBox\FilterModes.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\FilteredTextBox\FilterTypes.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\HoverExtender\HoverBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\HoverExtender\HoverExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\HoverExtender\HoverExtenderDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\HoverMenu\HoverMenu.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\HoverMenu\HoverMenuBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\HoverMenu\HoverMenuDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\HoverMenu\HoverMenuExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\HoverMenu\HoverMenuPopupPosition.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ListSearch\ListSearch.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ListSearch\ListSearchBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ListSearch\ListSearchDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ListSearch\ListSearchExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ListSearch\ListSearchPromptPosition.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ListSearch\ListSearchQueryPattern.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\MaskedEdit\Compatibility\BaseValidator.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\MaskedEdit\Compatibility\IBaseCompareValidatorAccessor.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\MaskedEdit\Compatibility\IBaseValidatorAccessor.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\MaskedEdit\Compatibility\IWebControlAccessor.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\MaskedEdit\Compatibility\ValidatorHelper.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\MaskedEdit\MaskedEdit.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\MaskedEdit\MaskedEditBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\MaskedEdit\MaskedEditCommon.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\MaskedEdit\MaskedEditDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\MaskedEdit\MaskedEditEnum.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\MaskedEdit\MaskedEditExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\MaskedEdit\MaskedEditTypeConvert.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\MaskedEdit\MaskedEditValidator.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\MaskedEdit\MaskedEditValidator.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ModalPopup\ModalPopup.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ModalPopup\ModalPopupBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ModalPopup\ModalPopupDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ModalPopup\ModalPopupExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ModalPopup\ModalPopupRepositionMode.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\MutuallyExclusiveCheckBox\MutuallyExclusiveCheckBox.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\MutuallyExclusiveCheckBox\MutuallyExclusiveCheckBoxBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\MutuallyExclusiveCheckBox\MutuallyExclusiveCheckBoxDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\MutuallyExclusiveCheckBox\MutuallyExclusiveCheckBoxExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\NoBot\NoBot.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\NoBot\NoBot.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\NoBot\NoBotBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\NoBot\NoBotDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\NoBot\NoBotEventArgs.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\NoBot\NoBotExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\NoBot\NoBotState.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\NumericUpDown\NumericUpDown.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\NumericUpDown\NumericUpDownBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\NumericUpDown\NumericUpDownDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\NumericUpDown\NumericUpDownExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\PagingBulletedList\PagingBulletedList.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\PagingBulletedList\PagingBulletedListBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\PagingBulletedList\PagingBulletedListDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\PagingBulletedList\PagingBulletedListExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\PasswordStrength\PasswordStrength.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\PasswordStrength\PasswordStrengthExtenderBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\PasswordStrength\PasswordStrengthExtenderDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\PasswordStrength\PasswordStrengthExtenderExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\PasswordStrength\PropertyEnumerations.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\PopupControl\PopupControl.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\PopupControl\PopupControlBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\PopupControl\PopupControlDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\PopupControl\PopupControlExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\PopupExtender\PopupBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\PopupExtender\PopupExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\PopupExtender\PopupExtenderDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\PopupExtender\PositioningMode.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Properties\AssemblyInfo.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Properties\Resources.Designer.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Rating\Rating.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Rating\Rating.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Rating\RatingBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Rating\RatingDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Rating\RatingExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Rating\RatingProperties.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ReorderList\BulletedList.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ReorderList\BulletedListItem.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ReorderList\DraggableListItemBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ReorderList\DraggableListItemExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ReorderList\DropWatcherBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ReorderList\DropWatcherExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ReorderList\ReorderHandleAlignment.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ReorderList\ReorderList.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ReorderList\ReorderList.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ReorderList\ReorderListDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ReorderList\ReorderListEvents.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ReorderList\ReorderListInsertLocation.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ReorderList\ReorderListItem.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ReorderList\ReorderListItemCollection.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ReorderList\ReorderListItemLayoutType.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ReorderList\RepeatDirection.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ResizableControl\ResizableControl.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ResizableControl\ResizableControlBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ResizableControl\ResizableControlDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ResizableControl\ResizableControlExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\RoundedCorners\BoxCorners.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\RoundedCorners\RoundedCorners.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\RoundedCorners\RoundedCornersBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\RoundedCorners\RoundedCornersDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\RoundedCorners\RoundedCornersExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Slider\Images\slider_h_handle.gif" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Slider\Images\slider_h_rail.gif" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Slider\Images\slider_v_handle.gif" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Slider\Images\slider_v_rail.gif" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Slider\Slider.css" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Slider\Slider.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Slider\SliderBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Slider\SliderDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Slider\SliderExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Slider\SliderOrientation.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\SlideShow\Slide.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\SlideShow\SlideShow.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\SlideShow\SlideShowBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\SlideShow\SlideShowDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\SlideShow\SlideShowExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Tabs\tab-active-left.gif" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Tabs\tab-active-right.gif" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Tabs\tab-active.gif" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Tabs\tab-hover-left.gif" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Tabs\tab-hover-right.gif" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Tabs\tab-hover.gif" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Tabs\tab-left.gif" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Tabs\tab-line.gif" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Tabs\tab-right.gif" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Tabs\tab.gif" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Tabs\TabContainer.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Tabs\TabContainerDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Tabs\TabPanel.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Tabs\TabPanelCollection.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Tabs\TabPanelDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Tabs\Tabs.css" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Tabs\Tabs.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\Tabs\Tabs.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\TextboxWatermark\TextboxWatermark.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\TextboxWatermark\TextboxWatermark.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\TextboxWatermark\TextboxWatermarkExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\TextboxWatermark\TextboxWatermarkExtenderDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ToggleButton\ToggleButton.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ToggleButton\ToggleButton.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ToggleButton\ToggleButtonExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ToggleButton\ToggleButtonExtenderDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ToolkitScriptManager\ScriptCombineAttribute.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ToolkitScriptManager\ToolkitScriptManager.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\UpdatePanelAnimation\UpdatePanelAnimation.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\UpdatePanelAnimation\UpdatePanelAnimationBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\UpdatePanelAnimation\UpdatePanelAnimationDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\UpdatePanelAnimation\UpdatePanelAnimationExtender.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ValidatorCallout\alert-large.gif" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ValidatorCallout\alert-small.gif" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ValidatorCallout\close.gif" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ValidatorCallout\ValidatorCallout.css" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ValidatorCallout\ValidatorCallout.ico" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ValidatorCallout\ValidatorCalloutBehavior.js" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ValidatorCallout\ValidatorCalloutDesigner.cs" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ValidatorCallout\ValidatorCalloutExtender.cs" />
+    <Content Include="AjaxControlToolkit\Binaries\BuildVsi.dll" />
+    <Content Include="AjaxControlToolkit\Binaries\JavaScriptCommentStripper.dll" />
+    <Content Include="AjaxControlToolkit\Binaries\Microsoft.Web.Testing.dll" />
+    <Content Include="AjaxControlToolkit\Binaries\Tools.dll" />
+    <Content Include="AjaxControlToolkit\ReadMe.txt" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Accordion\Accordion.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\AlwaysVisibleControl\AlwaysVisibleControl.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\AlwaysVisibleControl\AlwaysVisibleControl.aspx.cs" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Animation\Animation.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\App_Code\AutoComplete.cs" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\App_Code\CarsService.cs" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\App_Code\CommonPage.cs" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\App_Code\NumericUpDown.cs" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\App_Code\SessionProfileProvider.cs" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\App_Code\TodoXmlDataObject.cs" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\App_Data\CarsService.xml" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\App_Data\TodoItems.xml" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\App_Themes\SampleSiteTheme\Images\menu-bg.gif" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\App_Themes\SampleSiteTheme\Menu.ContextMenu.css" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\ArchivedReleases.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\AutoComplete\AutoComplete.asmx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\AutoComplete\AutoComplete.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Bin\AjaxControlToolkit.dll" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Bin\AjaxControlToolkit.pdb" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Bin\ar\AjaxControlToolkit.resources.dll" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Bin\cs\AjaxControlToolkit.resources.dll" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Bin\de\AjaxControlToolkit.resources.dll" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Bin\es\AjaxControlToolkit.resources.dll" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Bin\fr\AjaxControlToolkit.resources.dll" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Bin\he\AjaxControlToolkit.resources.dll" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Bin\hi\AjaxControlToolkit.resources.dll" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Bin\it\AjaxControlToolkit.resources.dll" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Bin\ja\AjaxControlToolkit.resources.dll" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Bin\ko\AjaxControlToolkit.resources.dll" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Bin\nl\AjaxControlToolkit.resources.dll" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Bin\pt\AjaxControlToolkit.resources.dll" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Bin\ru\AjaxControlToolkit.resources.dll" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Bin\tr-TR\AjaxControlToolkit.resources.dll" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Bin\zh-CHS\AjaxControlToolkit.resources.dll" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Bin\zh-CHT\AjaxControlToolkit.resources.dll" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Calendar\Calendar.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\CascadingDropDown\CarsService.asmx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\CascadingDropDown\CascadingDropDown.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\CascadingDropDown\CascadingDropDown.aspx.cs" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\CollapsiblePanel\CollapsiblePanel.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\ConfirmButton\ConfirmButton.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\ConfirmButton\ConfirmButton.aspx.cs" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Default.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\DefaultMaster.master.cs" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\DragPanel\DragPanel.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\DropDown\DropDown.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\DropDown\DropDown.aspx.cs" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\DropShadow\DropShadow.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\DynamicPopulate\DynamicPopulate.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\FilteredTextBox\FilteredTextBox.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\HoverMenu\Hovermenu.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\AJAX.gif" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\bg-main.png" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\bg-menu-main.png" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\bg-snippet-dim.png" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\bg-snippet.png" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\bg_body.gif" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\bg_gradient-left.png" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\bg_nav.gif" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\bg_wrapper.gif" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\body_bg.gif" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\Calendar_scheduleHS.png" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\collapse.jpg" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\collapse_blue.jpg" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\containerback.jpg" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\containerback2.jpg" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\demobottom.png" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\demotop.png" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\down.gif" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\EmptyStar.png" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\expand.jpg" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\expand_blue.jpg" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\FilledStar.png" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\HandleGrip.png" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\HandleHand.png" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\header-opened.png" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\header.png" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\headerbottom_img.png" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\headertop_img.jpg" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\loading.gif" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\navigation_back.gif" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\pbrs.png" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\Question.PNG" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\rightcoltop.gif" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\samples_bg.gif" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\SavedStar.png" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\sidebar_header.png" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\up.gif" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\images\walkthrough_bg.gif" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\ListSearch\ListSearch.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\MaskedEdit\MaskedEdit.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\ModalPopup\ModalPopup.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\MutuallyExclusiveCheckBox\MutuallyExclusiveCheckBox.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\NoBot\NoBot.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\NoBot\NoBot.aspx.cs" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\NumericUpDown\NumericUpDown.asmx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\NumericUpDown\NumericUpDown.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\NumericUpDown\NumericUpDown.aspx.cs" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\PagingBulletedList\PagingBulletedList.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\PasswordStrength\PasswordStrength.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\PopupControl\PopupControl.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\PopupControl\PopupControl.aspx.cs" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Rating\Rating.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Rating\Rating.aspx.cs" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\ReorderList\ReorderList.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\ResizableControl\ResizableControl.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\ResizableControl\ResizableControl.aspx.cs" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\RoundedCorners\RoundedCorners.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Slider\Slider.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Slider\Slider.aspx.cs" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\SlideShow\images\Blue hills.jpg" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\SlideShow\images\Sunset.jpg" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\SlideShow\images\VerticalPicture.jpg" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\SlideShow\images\Water lilies.jpg" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\SlideShow\images\Winter.jpg" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\SlideShow\SlideShow.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\StyleSheet.css" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Tabs\Tabs.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Tabs\Tabs.aspx.cs" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\TextboxWatermark\TextboxWatermark.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\TextboxWatermark\TextboxWatermark.aspx.cs" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\ToggleButton\ToggleButton.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\ToggleButton\ToggleButton.aspx.cs" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\ToggleButton\ToggleButton_Checked.gif" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\ToggleButton\ToggleButton_Unchecked.gif" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\UpdatePanelAnimation\UpdatePanelAnimation.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\UpdatePanelAnimation\UpdatePanelAnimation.aspx.cs" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\ValidatorCallout\ValidatorCallout.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\ValidatorCallout\ValidatorCallout.aspx.cs" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Walkthrough\AnimationReference.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Walkthrough\AtlasToAspNetAjax.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Walkthrough\AutomatedTesting.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Walkthrough\CCDWithDB.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Walkthrough\CreatingNewExtender.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Walkthrough\ExtenderClasses.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Walkthrough\OtherNeatStuff.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Walkthrough\Setup.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Walkthrough\UsingAnimations.aspx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Walkthrough\UsingSampleExtender.aspx" />
+    <Content Include="AjaxControlToolkit\TemplateVSI\CommonFilesCS\Designer.cs" />
+    <Content Include="AjaxControlToolkit\TemplateVSI\CommonFilesCS\Extender.cs" />
+    <Content Include="AjaxControlToolkit\TemplateVSI\CommonFiles\Behavior.js" />
+    <Content Include="AjaxControlToolkit\TemplateVSI\CommonFiles\__TemplateIcon.ico" />
+    <Content Include="AjaxControlToolkit\TemplateVSI\ItemTemplateCS\MyTemplate.vstemplate" />
+    <Content Include="AjaxControlToolkit\TemplateVSI\ItemTemplateVB\MyTemplate.vstemplate" />
+    <Content Include="AjaxControlToolkit\TemplateVSI\ProjectTemplateCS\MyTemplate.vstemplate" />
+    <Content Include="AjaxControlToolkit\TemplateVSI\ProjectTemplateVB\MyTemplate.vstemplate" />
+    <Content Include="AjaxControlToolkit\TemplateVSI\TemplateVSI.xml" />
+    <Content Include="AjaxControlToolkit\TemplateVSI\ToolkitWebsiteTemplate\Readme.txt" />
+    <Content Include="AjaxControlToolkit\TemplateVSI\ToolkitWebsiteTemplate\ToolkitWebsiteTemplateCS\AjaxControlToolkitWebsiteCS.vstemplate" />
+    <Content Include="AjaxControlToolkit\TemplateVSI\ToolkitWebsiteTemplate\ToolkitWebsiteTemplateCS\Default.aspx" />
+    <Content Include="AjaxControlToolkit\TemplateVSI\ToolkitWebsiteTemplate\ToolkitWebsiteTemplateCS\Default.aspx.cs" />
+    <Content Include="AjaxControlToolkit\TemplateVSI\ToolkitWebsiteTemplate\ToolkitWebsiteTemplateVB\AjaxControlToolkitWebsiteVB.vstemplate" />
+    <Content Include="AjaxControlToolkit\TemplateVSI\ToolkitWebsiteTemplate\ToolkitWebsiteTemplateVB\Default.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Accordion.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Accordion.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\AlwaysVisibleControl.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\AlwaysVisibleControl.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Animation.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\App_Code\CarsService.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\App_Code\ServerValidator.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\App_Code\SessionProfileProvider.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\App_Code\TodoXmlDataObject.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\App_Data\CarsService.xml" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\App_Data\CarsServiceWithDefault.xml" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\App_Data\TodoItems.xml" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\AutoComplete.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\AutoComplete.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Calendar.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Calendar.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\CarsService.asmx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\CascadingDropDown.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\CascadingDropDown.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\CollapsiblePanel.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\CollapsiblePanel.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Common.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\ConfirmButton.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\ConfirmButton.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\DataBinding.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\DataBinding.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Default.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Default.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Default.css" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Default.master.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\DragPanel.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\DragPanel.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\DropDown.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\DropShadow.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\DropShadow.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\DynamicPopulate.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\DynamicPopulate.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\ExtenderBase.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\ExtenderBase.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\ExtenderBase.js" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\FilteredTextBox.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\FilteredTextBox.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\HoverMenu.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\HoverMenu.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Images\2screensLG.gif" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Images\Blue hills.jpg" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Images\Calendar_scheduleHS.png" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Images\EmptyStar.png" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Images\FilledStar.png" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Images\SavedStar.png" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Images\Sunset.jpg" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Images\ToggleButton_Checked.gif" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Images\ToggleButton_DisabledChecked.gif" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Images\ToggleButton_DisabledUnchecked.gif" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Images\ToggleButton_Unchecked.gif" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Images\Winter.jpg" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\ListSearch.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\ListSearch.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Manual\Accordion.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Manual\AutoCompleteInUpdatePanel.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Manual\AutoCompleteWithContext.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Manual\Calendar\4814CalendarWithModalPopup.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Manual\Calendar\7265CalendarExtenderInNonenUSLocales.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Manual\Calendar\7317CalendarExtenderDoesNotCloseProperlyInFireFox.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Manual\Calendar\InputInPTag.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Manual\ClientStateLifecycle.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Manual\ConfirmButtonUsingModalPopup.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Manual\DataboundDynamicPopulate.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Manual\DropDown\DropDownRelativeAbsolutePositioningFrameBug.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Manual\DropDown\DropDownWithLinkInIE6.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Manual\HorizontalCollapsiblePanel.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Manual\ModalPopupPositioningTest.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Manual\MultipleExtenders.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Manual\Repeater.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Manual\Repeater.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Manual\ScriptCombiner.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Manual\ServerSideModalPopup.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Manual\ServerValidation.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Manual\SlideShowEventsHookUp.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Manual\TabsInUpdatePanel.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Manual\Tabs\Default.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Manual\Tabs\StyleSheetDupes.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Manual\ToggleButtonAndMutuallyExclusiveCheckBox.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Manual\Validation.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Manual\WatermarkedTextInterop.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\MaskedEdit.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\MaskedEdit.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\ModalPopup.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\ModalPopup.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\MutuallyExclusiveCheckBox.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\NoBot.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\NoBot.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\NumericUpDown.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\NumericUpDown.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\PagingBulletedList.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\PagingBulletedList.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\PasswordStrength.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\PasswordStrength.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Popup.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Popup.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\PopupControl.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\PopupControl.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\ProfileBinding.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\ProfileBinding.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\RatingControl.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\RatingControl.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Regressions.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Regressions.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\ReorderList.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\ReorderList.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\ResizableControl.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\ResizableControl.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\RoundedCorners.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\RoundedCorners.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Slider.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Slider.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\SlideShow.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Tabs.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\TestHarness.js" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\TestHarnessTests.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\TestHarnessTests.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\TextboxWatermark.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\TextboxWatermark.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\ToggleButton.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\ToggleButton.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\ToolkitScriptManager.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\ToolkitScriptManager.js" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\ToolkitTestService.asmx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\UpdatePanelAnimation.aspx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\UpdatePanelAnimation.aspx.cs" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\ValidatorCallout.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -248,6 +834,12 @@
     </Compile>
     <Compile Include="Access\RptScreensFrm.aspx.vb">
       <DependentUpon>RptScreensFrm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControlToolkit\TemplateVSI\CommonFilesVB\Designer.vb" />
+    <Compile Include="AjaxControlToolkit\TemplateVSI\CommonFilesVB\Extender.vb" />
+    <Compile Include="AjaxControlToolkit\TemplateVSI\ToolkitWebsiteTemplate\ToolkitWebsiteTemplateVB\Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="announcement\covid19dailydeclaration.aspx.designer.vb">
@@ -5069,1532 +5661,6 @@
       <DependentUpon>NewEMS.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PURCHASING\GRN\BatchDetailsPrint.vb">
-      <SubType>Component</SubType>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BatchDetailsPrint.rpt</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\GenerateGRN.aspx.designer.vb">
-      <DependentUpon>GenerateGRN.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\GenerateGRN.aspx.vb">
-      <DependentUpon>GenerateGRN.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\GRNBatch_New.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GRNBatch_New.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\GRNCostReport.aspx.designer.vb">
-      <DependentUpon>GRNCostReport.aspx.vb</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\GRNCostReport.aspx.vb">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\GRNCostReportDesign.aspx.designer.vb">
-      <DependentUpon>GRNCostReportDesign.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\GRNCostReportDesign.aspx.vb">
-      <DependentUpon>GRNCostReportDesign.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\GRNGenerateBatch.aspx.designer.vb">
-      <DependentUpon>GRNGenerateBatch.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\GRNGenerateBatch.aspx.vb">
-      <DependentUpon>GRNGenerateBatch.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\GRNPreparation.aspx.designer.vb">
-      <DependentUpon>GRNPreparation.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\GRNPreparation.aspx.vb">
-      <DependentUpon>GRNPreparation.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\GRNPreparation_New.aspx.designer.vb">
-      <DependentUpon>GRNPreparation_New.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\GRNPreparation_New.aspx.vb">
-      <DependentUpon>GRNPreparation_New.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\GRNPrepReport.aspx.designer.vb">
-      <DependentUpon>GRNPrepReport.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\GRNPrepReport.aspx.vb">
-      <DependentUpon>GRNPrepReport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\GRN_Cost_Report.vb">
-      <SubType>Component</SubType>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GRN_Cost_Report.rpt</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\PrintBatchDetails.aspx.designer.vb">
-      <DependentUpon>PrintBatchDetails.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\PrintBatchDetails.aspx.vb">
-      <DependentUpon>PrintBatchDetails.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\PrintGRN_Batch.aspx.designer.vb">
-      <DependentUpon>PrintGRN_Batch.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\PrintGRN_Batch.aspx.vb">
-      <DependentUpon>PrintGRN_Batch.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\Purchasing_Cost_Report.aspx.designer.vb">
-      <DependentUpon>Purchasing_Cost_Report.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\Purchasing_Cost_Report.aspx.vb">
-      <DependentUpon>Purchasing_Cost_Report.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\Purchasing_Cost_Report_Direct.aspx.designer.vb">
-      <DependentUpon>Purchasing_Cost_Report_Direct.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\Purchasing_Cost_Report_Direct.aspx.vb">
-      <DependentUpon>Purchasing_Cost_Report_Direct.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\RptPObySupplier.vb">
-      <SubType>Component</SubType>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RptPObySupplier.rpt</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\RptPOReport.aspx.designer.vb">
-      <DependentUpon>RptPOReport.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\RptPOReport.aspx.vb">
-      <DependentUpon>RptPOReport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\RptPOReport.vb">
-      <SubType>Component</SubType>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RptPOReport.rpt</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\RptPOsearch.aspx.designer.vb">
-      <DependentUpon>RptPOsearch.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\RptPOsearch.aspx.vb">
-      <DependentUpon>RptPOsearch.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\Rpt_GRNPreparation.vb">
-      <SubType>Component</SubType>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Rpt_GRNPreparation.rpt</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\SupplierInvoiceGRN.aspx.designer.vb">
-      <DependentUpon>SupplierInvoiceGRN.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\SupplierInvoiceGRN.aspx.vb">
-      <DependentUpon>SupplierInvoiceGRN.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\UploadCOA.aspx.designer.vb">
-      <DependentUpon>UploadCOA.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\GRN\UploadCOA.aspx.vb">
-      <DependentUpon>UploadCOA.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\ISR\ISRPrintForm.aspx.designer.vb">
-      <DependentUpon>ISRPrintForm.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\ISR\ISRPrintForm.aspx.vb">
-      <DependentUpon>ISRPrintForm.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\ISR\ISRReprint.aspx.designer.vb">
-      <DependentUpon>ISRReprint.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\ISR\ISRReprint.aspx.vb">
-      <DependentUpon>ISRReprint.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\ISR\ISR_New.aspx.designer.vb">
-      <DependentUpon>ISR_New.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\ISR\ISR_New.aspx.vb">
-      <DependentUpon>ISR_New.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\ISR\SelectUsageCost1.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SelectUsageCost1.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\ISR\SelectUsageCost1_ByDate.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SelectUsageCost1_ByDate.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\ISR\TimesUp.aspx.designer.vb">
-      <DependentUpon>TimesUp.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\ISR\TimesUp.aspx.vb">
-      <DependentUpon>TimesUp.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\ISR\UsageCalculation.aspx.designer.vb">
-      <DependentUpon>UsageCalculation.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\ISR\UsageCalculation.aspx.vb">
-      <DependentUpon>UsageCalculation.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\ISR\UsageCalculationRep.aspx.designer.vb">
-      <DependentUpon>UsageCalculationRep.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\ISR\UsageCalculationRep.aspx.vb">
-      <DependentUpon>UsageCalculationRep.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\ISR\UsageCostDetailedReport.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UsageCostDetailedReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\ISR\UsageCostDetailedReport_ByDate.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UsageCostDetailedReport_ByDate.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\businesstype.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>businesstype.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\BusinessTypeMaster.aspx.designer.vb">
-      <DependentUpon>BusinessTypeMaster.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\BusinessTypeMaster.aspx.vb">
-      <DependentUpon>BusinessTypeMaster.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\businesstypemasterreport.aspx.designer.vb">
-      <DependentUpon>businesstypemasterreport.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\businesstypemasterreport.aspx.vb">
-      <DependentUpon>businesstypemasterreport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\businesstyperpt.aspx.designer.vb">
-      <DependentUpon>businesstyperpt.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\businesstyperpt.aspx.vb">
-      <DependentUpon>businesstyperpt.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\buyersclassification.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>buyersclassification.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\buyersclassificationmaster.aspx.designer.vb">
-      <DependentUpon>buyersclassificationmaster.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\buyersclassificationmaster.aspx.vb">
-      <DependentUpon>buyersclassificationmaster.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\buyersclassificationmasterreport.aspx.designer.vb">
-      <DependentUpon>buyersclassificationmasterreport.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\buyersclassificationmasterreport.aspx.vb">
-      <DependentUpon>buyersclassificationmasterreport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\buyersclassificationrpt.aspx.designer.vb">
-      <DependentUpon>buyersclassificationrpt.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\buyersclassificationrpt.aspx.vb">
-      <DependentUpon>buyersclassificationrpt.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\COCCOAElementMaster.aspx.designer.vb">
-      <DependentUpon>COCCOAElementMaster.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\COCCOAElementMaster.aspx.vb">
-      <DependentUpon>COCCOAElementMaster.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\COCCOAElementmasterspec.aspx.designer.vb">
-      <DependentUpon>COCCOAElementmasterspec.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\COCCOAElementmasterspec.aspx.vb">
-      <DependentUpon>COCCOAElementmasterspec.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\CostReductionPlan.aspx.designer.vb">
-      <DependentUpon>CostReductionPlan.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\CostReductionPlan.aspx.vb">
-      <DependentUpon>CostReductionPlan.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\currency.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>currency.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\currencymaster.aspx.designer.vb">
-      <DependentUpon>currencymaster.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\currencymaster.aspx.vb">
-      <DependentUpon>currencymaster.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\currencymasterreport.aspx.designer.vb">
-      <DependentUpon>currencymasterreport.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\currencymasterreport.aspx.vb">
-      <DependentUpon>currencymasterreport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\currencymasterrpt.aspx.designer.vb">
-      <DependentUpon>currencymasterrpt.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\currencymasterrpt.aspx.vb">
-      <DependentUpon>currencymasterrpt.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\editproduct.aspx.designer.vb">
-      <DependentUpon>editproduct.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\editproduct.aspx.vb">
-      <DependentUpon>editproduct.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\EditProductMaster.aspx.designer.vb">
-      <DependentUpon>EditProductMaster.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\EditProductMaster.aspx.vb">
-      <DependentUpon>EditProductMaster.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\EditSupplierMaster.aspx.designer.vb">
-      <DependentUpon>EditSupplierMaster.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\EditSupplierMaster.aspx.vb">
-      <DependentUpon>EditSupplierMaster.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\Elementmaster.aspx.designer.vb">
-      <DependentUpon>Elementmaster.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\Elementmaster.aspx.vb">
-      <DependentUpon>Elementmaster.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\ElementMasterSpec.aspx.designer.vb">
-      <DependentUpon>ElementMasterSpec.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\ElementMasterSpec.aspx.vb">
-      <DependentUpon>ElementMasterSpec.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\ExchangeEntryScreen_New.aspx.designer.vb">
-      <DependentUpon>ExchangeEntryScreen_New.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\ExchangeEntryScreen_New.aspx.vb">
-      <DependentUpon>ExchangeEntryScreen_New.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\exchangerateentryscreen.aspx.designer.vb">
-      <DependentUpon>exchangerateentryscreen.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\exchangerateentryscreen.aspx.vb">
-      <DependentUpon>exchangerateentryscreen.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\jobservicescope.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>jobservicescope.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\JobServiceScopeMaster.aspx.designer.vb">
-      <DependentUpon>JobServiceScopeMaster.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\JobServiceScopeMaster.aspx.vb">
-      <DependentUpon>JobServiceScopeMaster.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\JobServiceScopeMasterreport.aspx.designer.vb">
-      <DependentUpon>JobServiceScopeMasterreport.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\JobServiceScopeMasterreport.aspx.vb">
-      <DependentUpon>JobServiceScopeMasterreport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\jobservicescoperpt.aspx.designer.vb">
-      <DependentUpon>jobservicescoperpt.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\jobservicescoperpt.aspx.vb">
-      <DependentUpon>jobservicescoperpt.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\machinery.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>machinery.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\machinerymaster.aspx.designer.vb">
-      <DependentUpon>machinerymaster.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\machinerymaster.aspx.vb">
-      <DependentUpon>machinerymaster.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\machinerymasterreport.aspx.designer.vb">
-      <DependentUpon>machinerymasterreport.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\machinerymasterreport.aspx.vb">
-      <DependentUpon>machinerymasterreport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\machineryrpt.aspx.designer.vb">
-      <DependentUpon>machineryrpt.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\machineryrpt.aspx.vb">
-      <DependentUpon>machineryrpt.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\NewProductMasterReport.aspx.designer.vb">
-      <DependentUpon>NewProductMasterReport.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\NewProductMasterReport.aspx.vb">
-      <DependentUpon>NewProductMasterReport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\paymentterm.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>paymentterm.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\paymenttermmaster.aspx.designer.vb">
-      <DependentUpon>paymenttermmaster.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\paymenttermmaster.aspx.vb">
-      <DependentUpon>paymenttermmaster.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\paymenttermmasterreport.aspx.designer.vb">
-      <DependentUpon>paymenttermmasterreport.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\paymenttermmasterreport.aspx.vb">
-      <DependentUpon>paymenttermmasterreport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\paymenttermrpt.aspx.designer.vb">
-      <DependentUpon>paymenttermrpt.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\paymenttermrpt.aspx.vb">
-      <DependentUpon>paymenttermrpt.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\PrintSupplierUserInfo.aspx.designer.vb">
-      <DependentUpon>PrintSupplierUserInfo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\PrintSupplierUserInfo.aspx.vb">
-      <DependentUpon>PrintSupplierUserInfo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\product.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>product.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\productclass.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>productclass.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\ProductClassMaster.aspx.designer.vb">
-      <DependentUpon>ProductClassMaster.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\ProductClassMaster.aspx.vb">
-      <DependentUpon>ProductClassMaster.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\productclassmasterreport.aspx.designer.vb">
-      <DependentUpon>productclassmasterreport.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\productclassmasterreport.aspx.vb">
-      <DependentUpon>productclassmasterreport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\productclassrpt.aspx.designer.vb">
-      <DependentUpon>productclassrpt.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\productclassrpt.aspx.vb">
-      <DependentUpon>productclassrpt.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\productmaster.aspx.designer.vb">
-      <DependentUpon>productmaster.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\productmaster.aspx.vb">
-      <DependentUpon>productmaster.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\ProductMasterApproval.aspx.designer.vb">
-      <DependentUpon>ProductMasterApproval.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\ProductMasterApproval.aspx.vb">
-      <DependentUpon>ProductMasterApproval.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\productmasterreport.aspx.designer.vb">
-      <DependentUpon>productmasterreport.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\productmasterreport.aspx.vb">
-      <DependentUpon>productmasterreport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\productprice.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>productprice.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\productpricecomparison.aspx.designer.vb">
-      <DependentUpon>productpricecomparison.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\productpricecomparison.aspx.vb">
-      <DependentUpon>productpricecomparison.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\productpricerpt.aspx.designer.vb">
-      <DependentUpon>productpricerpt.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\productpricerpt.aspx.vb">
-      <DependentUpon>productpricerpt.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\productrpt.aspx.designer.vb">
-      <DependentUpon>productrpt.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\productrpt.aspx.vb">
-      <DependentUpon>productrpt.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\purchasejustification.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>purchasejustification.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\purchasejustificationmaster.aspx.designer.vb">
-      <DependentUpon>purchasejustificationmaster.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\purchasejustificationmaster.aspx.vb">
-      <DependentUpon>purchasejustificationmaster.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\purchasejustificationmasterreport.aspx.designer.vb">
-      <DependentUpon>purchasejustificationmasterreport.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\purchasejustificationmasterreport.aspx.vb">
-      <DependentUpon>purchasejustificationmasterreport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\purchasejustificationrpt.aspx.designer.vb">
-      <DependentUpon>purchasejustificationrpt.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\purchasejustificationrpt.aspx.vb">
-      <DependentUpon>purchasejustificationrpt.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\quotation.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>quotation.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\quotationapproval.aspx.designer.vb">
-      <DependentUpon>quotationapproval.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\quotationapproval.aspx.vb">
-      <DependentUpon>quotationapproval.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\quotationpending.aspx.designer.vb">
-      <DependentUpon>quotationpending.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\quotationpending.aspx.vb">
-      <DependentUpon>quotationpending.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\quotationreport.aspx.designer.vb">
-      <DependentUpon>quotationreport.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\quotationreport.aspx.vb">
-      <DependentUpon>quotationreport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\quotationrpt.aspx.designer.vb">
-      <DependentUpon>quotationrpt.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\quotationrpt.aspx.vb">
-      <DependentUpon>quotationrpt.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\shipmentterm.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>shipmentterm.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\shipmenttermmaster.aspx.designer.vb">
-      <DependentUpon>shipmenttermmaster.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\shipmenttermmaster.aspx.vb">
-      <DependentUpon>shipmenttermmaster.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\shipmenttermmasterreport.aspx.designer.vb">
-      <DependentUpon>shipmenttermmasterreport.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\shipmenttermmasterreport.aspx.vb">
-      <DependentUpon>shipmenttermmasterreport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\shipmenttermrpt.aspx.designer.vb">
-      <DependentUpon>shipmenttermrpt.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\shipmenttermrpt.aspx.vb">
-      <DependentUpon>shipmenttermrpt.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\status.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>status.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\statusrpt.aspx.designer.vb">
-      <DependentUpon>statusrpt.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\statusrpt.aspx.vb">
-      <DependentUpon>statusrpt.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\supplier.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>supplier.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\suppliercategory.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>suppliercategory.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\suppliercategorymaster.aspx.designer.vb">
-      <DependentUpon>suppliercategorymaster.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\suppliercategorymaster.aspx.vb">
-      <DependentUpon>suppliercategorymaster.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\suppliercategorymasterreport.aspx.designer.vb">
-      <DependentUpon>suppliercategorymasterreport.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\suppliercategorymasterreport.aspx.vb">
-      <DependentUpon>suppliercategorymasterreport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\suppliercategoryrpt.aspx.designer.vb">
-      <DependentUpon>suppliercategoryrpt.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\suppliercategoryrpt.aspx.vb">
-      <DependentUpon>suppliercategoryrpt.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\SupplierMaster.aspx.designer.vb">
-      <DependentUpon>SupplierMaster.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\SupplierMaster.aspx.vb">
-      <DependentUpon>SupplierMaster.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\SupplierMasterApproval.aspx.designer.vb">
-      <DependentUpon>SupplierMasterApproval.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\SupplierMasterApproval.aspx.vb">
-      <DependentUpon>SupplierMasterApproval.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\SupplierMasterEdit.aspx.designer.vb">
-      <DependentUpon>SupplierMasterEdit.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\SupplierMasterEdit.aspx.vb">
-      <DependentUpon>SupplierMasterEdit.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\SupplierMasterEditDetails.aspx.designer.vb">
-      <DependentUpon>SupplierMasterEditDetails.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\SupplierMasterEditDetails.aspx.vb">
-      <DependentUpon>SupplierMasterEditDetails.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\SupplierMasterreport.aspx.designer.vb">
-      <DependentUpon>SupplierMasterreport.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\SupplierMasterreport.aspx.vb">
-      <DependentUpon>SupplierMasterreport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\supplierrpt.aspx.designer.vb">
-      <DependentUpon>supplierrpt.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\supplierrpt.aspx.vb">
-      <DependentUpon>supplierrpt.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\supplierstatusmaster.aspx.designer.vb">
-      <DependentUpon>supplierstatusmaster.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\supplierstatusmaster.aspx.vb">
-      <DependentUpon>supplierstatusmaster.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\supplierstatusmasterreport.aspx.designer.vb">
-      <DependentUpon>supplierstatusmasterreport.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\supplierstatusmasterreport.aspx.vb">
-      <DependentUpon>supplierstatusmasterreport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\uom.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>uom.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\uommasterreport.aspx.designer.vb">
-      <DependentUpon>uommasterreport.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\uommasterreport.aspx.vb">
-      <DependentUpon>uommasterreport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Master\uomrpt.aspx.designer.vb">
-      <DependentUpon>uomrpt.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Master\uomrpt.aspx.vb">
-      <DependentUpon>uomrpt.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\BudgetAllocation.aspx.designer.vb">
-      <DependentUpon>BudgetAllocation.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PO\BudgetAllocation.aspx.vb">
-      <DependentUpon>BudgetAllocation.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\BudgetMaster.aspx.designer.vb">
-      <DependentUpon>BudgetMaster.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PO\BudgetMaster.aspx.vb">
-      <DependentUpon>BudgetMaster.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\CancelPOByDepartment.aspx.designer.vb">
-      <DependentUpon>CancelPOByDepartment.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PO\CancelPOByDepartment.aspx.vb">
-      <DependentUpon>CancelPOByDepartment.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\EditPO.aspx.designer.vb">
-      <DependentUpon>EditPO.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PO\EditPO.aspx.vb">
-      <DependentUpon>EditPO.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\EditPOverification.aspx.designer.vb">
-      <DependentUpon>EditPOverification.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PO\EditPOverification.aspx.vb">
-      <DependentUpon>EditPOverification.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\PackingQuantity.aspx.designer.vb">
-      <DependentUpon>PackingQuantity.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PO\PackingQuantity.aspx.vb">
-      <DependentUpon>PackingQuantity.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POAverageRequest.aspx.designer.vb">
-      <DependentUpon>POAverageRequest.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POAverageRequest.aspx.vb">
-      <DependentUpon>POAverageRequest.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POBatchApproval.aspx.designer.vb">
-      <DependentUpon>POBatchApproval.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POBatchApproval.aspx.vb">
-      <DependentUpon>POBatchApproval.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POclass.vb" />
-    <Compile Include="PURCHASING\PO\POEAapproval.aspx.designer.vb">
-      <DependentUpon>POEAapproval.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POEAapproval.aspx.vb">
-      <DependentUpon>POEAapproval.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POEAapprovalByBatch.aspx.designer.vb">
-      <DependentUpon>POEAapprovalByBatch.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POEAapprovalByBatch.aspx.vb">
-      <DependentUpon>POEAapprovalByBatch.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POEAapprovalByBatchMain.aspx.designer.vb">
-      <DependentUpon>POEAapprovalByBatchMain.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POEAapprovalByBatchMain.aspx.vb">
-      <DependentUpon>POEAapprovalByBatchMain.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POEAapprovalNew.aspx.designer.vb">
-      <DependentUpon>POEAapprovalNew.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POEAapprovalNew.aspx.vb">
-      <DependentUpon>POEAapprovalNew.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POEmailApproval.aspx.designer.vb">
-      <DependentUpon>POEmailApproval.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POEmailApproval.aspx.vb">
-      <DependentUpon>POEmailApproval.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POEmpAccess.aspx.designer.vb">
-      <DependentUpon>POEmpAccess.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POEmpAccess.aspx.vb">
-      <DependentUpon>POEmpAccess.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POform.aspx.designer.vb">
-      <DependentUpon>POform.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POform.aspx.vb">
-      <DependentUpon>POform.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POHodApprove.aspx.designer.vb">
-      <DependentUpon>POHodApprove.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POHodApprove.aspx.vb">
-      <DependentUpon>POHodApprove.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POListBatch.aspx.designer.vb">
-      <DependentUpon>POListBatch.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POListBatch.aspx.vb">
-      <DependentUpon>POListBatch.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POMaster.aspx.designer.vb">
-      <DependentUpon>POMaster.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POMaster.aspx.vb">
-      <DependentUpon>POMaster.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POMasterJapan.aspx.designer.vb">
-      <DependentUpon>POMasterJapan.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POMasterJapan.aspx.vb">
-      <DependentUpon>POMasterJapan.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POPreviousPurInfo.aspx.designer.vb">
-      <DependentUpon>POPreviousPurInfo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POPreviousPurInfo.aspx.vb">
-      <DependentUpon>POPreviousPurInfo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POPurchaseIncharge.aspx.designer.vb">
-      <DependentUpon>POPurchaseIncharge.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POPurchaseIncharge.aspx.vb">
-      <DependentUpon>POPurchaseIncharge.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\PORequest.aspx.designer.vb">
-      <DependentUpon>PORequest.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PO\PORequest.aspx.vb">
-      <DependentUpon>PORequest.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\PORequestNew.aspx.designer.vb">
-      <DependentUpon>PORequestNew.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PO\PORequestNew.aspx.vb">
-      <DependentUpon>PORequestNew.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POStatus.aspx.designer.vb">
-      <DependentUpon>POStatus.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POStatus.aspx.vb">
-      <DependentUpon>POStatus.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POvcidHodApprove.aspx.designer.vb">
-      <DependentUpon>POvcidHodApprove.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POvcidHodApprove.aspx.vb">
-      <DependentUpon>POvcidHodApprove.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POvcidHodApproveNew.aspx.designer.vb">
-      <DependentUpon>POvcidHodApproveNew.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POvcidHodApproveNew.aspx.vb">
-      <DependentUpon>POvcidHodApproveNew.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POVerification.aspx.designer.vb">
-      <DependentUpon>POVerification.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POVerification.aspx.vb">
-      <DependentUpon>POVerification.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POVerificationNew.aspx.designer.vb">
-      <DependentUpon>POVerificationNew.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POVerificationNew.aspx.vb">
-      <DependentUpon>POVerificationNew.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POVerificationSub.aspx.designer.vb">
-      <DependentUpon>POVerificationSub.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POVerificationSub.aspx.vb">
-      <DependentUpon>POVerificationSub.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POVerificationSubNew.aspx.designer.vb">
-      <DependentUpon>POVerificationSubNew.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POVerificationSubNew.aspx.vb">
-      <DependentUpon>POVerificationSubNew.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POVerified.aspx.designer.vb">
-      <DependentUpon>POVerified.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PO\POVerified.aspx.vb">
-      <DependentUpon>POVerified.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\PO_Report.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PO_Report.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\PO_VCID_HOD_Approve.aspx.designer.vb">
-      <DependentUpon>PO_VCID_HOD_Approve.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PO\PO_VCID_HOD_Approve.aspx.vb">
-      <DependentUpon>PO_VCID_HOD_Approve.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\PrintPO_New.aspx.designer.vb">
-      <DependentUpon>PrintPO_New.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PO\PrintPO_New.aspx.vb">
-      <DependentUpon>PrintPO_New.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\WebService1.asmx.vb">
-      <DependentUpon>WebService1.asmx</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PO\WebService3.asmx.vb">
-      <DependentUpon>WebService3.asmx</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\ProformaPO\BudgetAndProvision.aspx.designer.vb">
-      <DependentUpon>BudgetAndProvision.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\ProformaPO\BudgetAndProvision.aspx.vb">
-      <DependentUpon>BudgetAndProvision.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\ProformaPO\PO.aspx.designer.vb">
-      <DependentUpon>PO.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\ProformaPO\PO.aspx.vb">
-      <DependentUpon>PO.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\ProformaPO\POApproval.aspx.designer.vb">
-      <DependentUpon>POApproval.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\ProformaPO\POApproval.aspx.vb">
-      <DependentUpon>POApproval.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\ProformaPO\POApproved.aspx.designer.vb">
-      <DependentUpon>POApproved.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\ProformaPO\POApproved.aspx.vb">
-      <DependentUpon>POApproved.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\ProformaPO\POCloseOpen.aspx.designer.vb">
-      <DependentUpon>POCloseOpen.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\ProformaPO\POCloseOpen.aspx.vb">
-      <DependentUpon>POCloseOpen.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\ProformaPO\PoHistory.aspx.designer.vb">
-      <DependentUpon>PoHistory.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\ProformaPO\PoHistory.aspx.vb">
-      <DependentUpon>PoHistory.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\ProformaPO\POPreparation.aspx.designer.vb">
-      <DependentUpon>POPreparation.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\ProformaPO\POPreparation.aspx.vb">
-      <DependentUpon>POPreparation.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\ProformaPO\PORequestStatus.aspx.designer.vb">
-      <DependentUpon>PORequestStatus.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\ProformaPO\PORequestStatus.aspx.vb">
-      <DependentUpon>PORequestStatus.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\ProformaPO\PORequest_IN.aspx.designer.vb">
-      <DependentUpon>PORequest_IN.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\ProformaPO\PORequest_IN.aspx.vb">
-      <DependentUpon>PORequest_IN.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\ProformaPO\RequestDetail.aspx.designer.vb">
-      <DependentUpon>RequestDetail.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\ProformaPO\RequestDetail.aspx.vb">
-      <DependentUpon>RequestDetail.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\ProformaPO\RequestForm.aspx.designer.vb">
-      <DependentUpon>RequestForm.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\ProformaPO\RequestForm.aspx.vb">
-      <DependentUpon>RequestForm.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\ProformaPO\StockDetails.aspx.designer.vb">
-      <DependentUpon>StockDetails.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\ProformaPO\StockDetails.aspx.vb">
-      <DependentUpon>StockDetails.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\ProformaPO\StockReport_IN.aspx.designer.vb">
-      <DependentUpon>StockReport_IN.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\ProformaPO\StockReport_IN.aspx.vb">
-      <DependentUpon>StockReport_IN.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\ProformaPO\SupplierInput.aspx.designer.vb">
-      <DependentUpon>SupplierInput.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\ProformaPO\SupplierInput.aspx.vb">
-      <DependentUpon>SupplierInput.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\ProformaPO\SupplierInputVerify.aspx.designer.vb">
-      <DependentUpon>SupplierInputVerify.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\ProformaPO\SupplierInputVerify.aspx.vb">
-      <DependentUpon>SupplierInputVerify.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PR\EAapprovalsMultilevel.aspx.designer.vb">
-      <DependentUpon>EAapprovalsMultilevel.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PR\EAapprovalsMultilevel.aspx.vb">
-      <DependentUpon>EAapprovalsMultilevel.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PR\EAapproval_PR.aspx.designer.vb">
-      <DependentUpon>EAapproval_PR.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PR\EAapproval_PR.aspx.vb">
-      <DependentUpon>EAapproval_PR.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PR\EAapproval_PRall.aspx.designer.vb">
-      <DependentUpon>EAapproval_PRall.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PR\EAapproval_PRall.aspx.vb">
-      <DependentUpon>EAapproval_PRall.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PR\EAeditPR.aspx.designer.vb">
-      <DependentUpon>EAeditPR.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PR\EAeditPR.aspx.vb">
-      <DependentUpon>EAeditPR.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PR\EditPR.aspx.designer.vb">
-      <DependentUpon>EditPR.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PR\EditPR.aspx.vb">
-      <DependentUpon>EditPR.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PR\HODapproval_Dept.aspx.designer.vb">
-      <DependentUpon>HODapproval_Dept.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PR\HODapproval_Dept.aspx.vb">
-      <DependentUpon>HODapproval_Dept.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PR\HODapproval_SWP.aspx.designer.vb">
-      <DependentUpon>HODapproval_SWP.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PR\HODapproval_SWP.aspx.vb">
-      <DependentUpon>HODapproval_SWP.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PR\MatchReqDescWithPartno.aspx.designer.vb">
-      <DependentUpon>MatchReqDescWithPartno.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PR\MatchReqDescWithPartno.aspx.vb">
-      <DependentUpon>MatchReqDescWithPartno.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PR\PO_Report_PrintForm1.aspx.designer.vb">
-      <DependentUpon>PO_Report_PrintForm1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PR\PO_Report_PrintForm1.aspx.vb">
-      <DependentUpon>PO_Report_PrintForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PR\PRpendingCount.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PRpendingCount.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PR\PRrptPendingCount.aspx.designer.vb">
-      <DependentUpon>PRrptPendingCount.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PR\PRrptPendingCount.aspx.vb">
-      <DependentUpon>PRrptPendingCount.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PR\PRSelfStatus.aspx.designer.vb">
-      <DependentUpon>PRSelfStatus.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PR\PRSelfStatus.aspx.vb">
-      <DependentUpon>PRSelfStatus.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PR\PRwithQuot.aspx.designer.vb">
-      <DependentUpon>PRwithQuot.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PR\PRwithQuot.aspx.vb">
-      <DependentUpon>PRwithQuot.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PR\PR_Report.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PR_Report.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PR\PR_Report_PrintForm.aspx.designer.vb">
-      <DependentUpon>PR_Report_PrintForm.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PR\PR_Report_PrintForm.aspx.vb">
-      <DependentUpon>PR_Report_PrintForm.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PR\PR_Report_PrintForm1.aspx.designer.vb">
-      <DependentUpon>PR_Report_PrintForm1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PR\PR_Report_PrintForm1.aspx.vb">
-      <DependentUpon>PR_Report_PrintForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PR\PurchaseRequest.aspx.designer.vb">
-      <DependentUpon>PurchaseRequest.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PR\PurchaseRequest.aspx.vb">
-      <DependentUpon>PurchaseRequest.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PR\SWP.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SWP.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PR\VCIDHODapproval_PR.aspx.designer.vb">
-      <DependentUpon>VCIDHODapproval_PR.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PR\VCIDHODapproval_PR.aspx.vb">
-      <DependentUpon>VCIDHODapproval_PR.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PR\VCIDHODeditPR.aspx.designer.vb">
-      <DependentUpon>VCIDHODeditPR.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PR\VCIDHODeditPR.aspx.vb">
-      <DependentUpon>VCIDHODeditPR.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PR\vcidverificationfirstscreen.aspx.designer.vb">
-      <DependentUpon>vcidverificationfirstscreen.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PR\vcidverificationfirstscreen.aspx.vb">
-      <DependentUpon>vcidverificationfirstscreen.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PR\VCIDVerificationMPRC.aspx.designer.vb">
-      <DependentUpon>VCIDVerificationMPRC.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PR\VCIDVerificationMPRC.aspx.vb">
-      <SubType>ASPXCodeBehind</SubType>
-      <DependentUpon>VCIDVerificationMPRC.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PR\VCIDVerificationVerifyScreen.aspx.designer.vb">
-      <DependentUpon>VCIDVerificationVerifyScreen.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PR\VCIDVerificationVerifyScreen.aspx.vb">
-      <DependentUpon>VCIDVerificationVerifyScreen.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\PR\VCIDVerificationVerifyScreenSWP.aspx.designer.vb">
-      <DependentUpon>VCIDVerificationVerifyScreenSWP.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\PR\VCIDVerificationVerifyScreenSWP.aspx.vb">
-      <DependentUpon>VCIDVerificationVerifyScreenSWP.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Reports\GRN_Status.aspx.designer.vb">
-      <DependentUpon>GRN_Status.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Reports\GRN_Status.aspx.vb">
-      <DependentUpon>GRN_Status.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Reports\KPI_Report.vb">
-      <SubType>Component</SubType>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>KPI_Report.rpt</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Reports\KPI_Report_Design.aspx.designer.vb">
-      <DependentUpon>KPI_Report_Design.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Reports\KPI_Report_Design.aspx.vb">
-      <DependentUpon>KPI_Report_Design.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Reports\KPI_Report_Design1.aspx.designer.vb">
-      <DependentUpon>KPI_Report_Design1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Reports\KPI_Report_Design1.aspx.vb">
-      <DependentUpon>KPI_Report_Design1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Reports\KPI_Report_Design2.aspx.designer.vb">
-      <DependentUpon>KPI_Report_Design2.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Reports\KPI_Report_Design2.aspx.vb">
-      <DependentUpon>KPI_Report_Design2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Reports\OverallCostSummary.aspx.designer.vb">
-      <DependentUpon>OverallCostSummary.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Reports\OverallCostSummary.aspx.vb">
-      <DependentUpon>OverallCostSummary.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Reports\PendingPOByDepartment.aspx.designer.vb">
-      <DependentUpon>PendingPOByDepartment.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Reports\PendingPOByDepartment.aspx.vb">
-      <DependentUpon>PendingPOByDepartment.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Reports\PendingPOBySection.aspx.designer.vb">
-      <DependentUpon>PendingPOBySection.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Reports\PendingPOBySection.aspx.vb">
-      <DependentUpon>PendingPOBySection.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Reports\PendingPODetails.aspx.designer.vb">
-      <DependentUpon>PendingPODetails.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Reports\PendingPODetails.aspx.vb">
-      <DependentUpon>PendingPODetails.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Reports\PendingPRDetails.aspx.designer.vb">
-      <DependentUpon>PendingPRDetails.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Reports\PendingPRDetails.aspx.vb">
-      <DependentUpon>PendingPRDetails.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Reports\PendingPRDetails_PurHOD.aspx.designer.vb">
-      <DependentUpon>PendingPRDetails_PurHOD.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Reports\PendingPRDetails_PurHOD.aspx.vb">
-      <DependentUpon>PendingPRDetails_PurHOD.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Reports\RemoveItemFromPOndPR.aspx.designer.vb">
-      <DependentUpon>RemoveItemFromPOndPR.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Reports\RemoveItemFromPOndPR.aspx.vb">
-      <DependentUpon>RemoveItemFromPOndPR.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Safety\BallMillOverallReport.aspx.designer.vb">
-      <DependentUpon>BallMillOverallReport.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Safety\BallMillOverallReport.aspx.vb">
-      <DependentUpon>BallMillOverallReport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Safety\DailyBallMillCheckSheet.aspx.designer.vb">
-      <DependentUpon>DailyBallMillCheckSheet.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Safety\DailyBallMillCheckSheet.aspx.vb">
-      <DependentUpon>DailyBallMillCheckSheet.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Safety\NightDutyCheckSheet1.aspx.designer.vb">
-      <DependentUpon>NightDutyCheckSheet1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Safety\NightDutyCheckSheet1.aspx.vb">
-      <DependentUpon>NightDutyCheckSheet1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Safety\NightDutyCheckSheetReport.aspx.designer.vb">
-      <DependentUpon>NightDutyCheckSheetReport.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Safety\NightDutyCheckSheetReport.aspx.vb">
-      <DependentUpon>NightDutyCheckSheetReport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Safety\NightDutyReport.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NightDutyReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Safety\RptDailyBallMillCheckSheet.aspx.designer.vb">
-      <DependentUpon>RptDailyBallMillCheckSheet.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Safety\RptDailyBallMillCheckSheet.aspx.vb">
-      <DependentUpon>RptDailyBallMillCheckSheet.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Safety\RPTOverall.aspx.designer.vb">
-      <DependentUpon>RPTOverall.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Safety\RPTOverall.aspx.vb">
-      <DependentUpon>RPTOverall.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Safety\RptSDailyCastingCheckSheet.aspx.designer.vb">
-      <DependentUpon>RptSDailyCastingCheckSheet.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Safety\RptSDailyCastingCheckSheet.aspx.vb">
-      <DependentUpon>RptSDailyCastingCheckSheet.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Safety\RptSDailyCastingCheckSheet.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RptSDailyCastingCheckSheet.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Safety\RptTDailyCastingCheckSheet.aspx.designer.vb">
-      <DependentUpon>RptTDailyCastingCheckSheet.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Safety\RptTDailyCastingCheckSheet.aspx.vb">
-      <DependentUpon>RptTDailyCastingCheckSheet.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Safety\RptTDailyCastingCheckSheet.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RptTDailyCastingCheckSheet.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Safety\Rpt_DailyBallMillCheckSheet.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Rpt_DailyBallMillCheckSheet.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Safety\SCastingCheckSheetGridReport.aspx.designer.vb">
-      <DependentUpon>SCastingCheckSheetGridReport.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Safety\SCastingCheckSheetGridReport.aspx.vb">
-      <DependentUpon>SCastingCheckSheetGridReport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Safety\SDailyCastingCheckSheet.aspx.designer.vb">
-      <DependentUpon>SDailyCastingCheckSheet.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Safety\SDailyCastingCheckSheet.aspx.vb">
-      <DependentUpon>SDailyCastingCheckSheet.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Safety\TCastingCheckSheetGridReport.aspx.designer.vb">
-      <DependentUpon>TCastingCheckSheetGridReport.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Safety\TCastingCheckSheetGridReport.aspx.vb">
-      <DependentUpon>TCastingCheckSheetGridReport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Safety\TDailyCastingCheckSheet.aspx.designer.vb">
-      <DependentUpon>TDailyCastingCheckSheet.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Safety\TDailyCastingCheckSheet.aspx.vb">
-      <DependentUpon>TDailyCastingCheckSheet.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Safety\TPHBallMillOverallReport.aspx.designer.vb">
-      <DependentUpon>TPHBallMillOverallReport.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Safety\TPHBallMillOverallReport.aspx.vb">
-      <DependentUpon>TPHBallMillOverallReport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Safety\TPHDailyBallMillCheckSheet.aspx.designer.vb">
-      <DependentUpon>TPHDailyBallMillCheckSheet.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Safety\TPHDailyBallMillCheckSheet.aspx.vb">
-      <DependentUpon>TPHDailyBallMillCheckSheet.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Safety\TPHRptDailyBallMillCheckSheet.aspx.designer.vb">
-      <DependentUpon>TPHRptDailyBallMillCheckSheet.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Safety\TPHRptDailyBallMillCheckSheet.aspx.vb">
-      <DependentUpon>TPHRptDailyBallMillCheckSheet.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Safety\TPHRPTOverall.aspx.designer.vb">
-      <DependentUpon>TPHRPTOverall.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Safety\TPHRPTOverall.aspx.vb">
-      <DependentUpon>TPHRPTOverall.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Safety\TPHRpt_DailyBallMillCheckSheet.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TPHRpt_DailyBallMillCheckSheet.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="SMS\MainOnoffCompany.aspx.designer.vb">
-      <DependentUpon>MainOnoffCompany.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SMS\MainOnoffCompany.aspx.vb">
-      <DependentUpon>MainOnoffCompany.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SMS\RegHpuser.aspx.designer.vb">
-      <DependentUpon>RegHpuser.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SMS\RegHpuser.aspx.vb">
-      <DependentUpon>RegHpuser.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SMS\RegisterModule.aspx.designer.vb">
-      <DependentUpon>RegisterModule.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SMS\RegisterModule.aspx.vb">
-      <DependentUpon>RegisterModule.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SMS\RegisterSystem.aspx.designer.vb">
-      <DependentUpon>RegisterSystem.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SMS\RegisterSystem.aspx.vb">
-      <DependentUpon>RegisterSystem.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SMS\RegSMScode.aspx.designer.vb">
-      <DependentUpon>RegSMScode.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SMS\RegSMScode.aspx.vb">
-      <DependentUpon>RegSMScode.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SMS\RegUserandHp.aspx.designer.vb">
-      <DependentUpon>RegUserandHp.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SMS\RegUserandHp.aspx.vb">
-      <DependentUpon>RegUserandHp.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="HRMIS\safety\BinCodeMaster.aspx.designer.vb">
       <DependentUpon>BinCodeMaster.aspx</DependentUpon>
     </Compile>
@@ -6973,90 +6039,6 @@
       <DependentUpon>Logout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="obj\Debug\E_Management.E_Management.E_Management.PrtGpDepts.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>E_Management.E_Management.E_Management.PrtGpDepts.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="obj\Debug\E_Management.E_Management.E_Management.rptGpdesig.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>E_Management.E_Management.E_Management.rptGpdesig.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="obj\Debug\E_Management.E_Management.E_Management.rptGpSect.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>E_Management.E_Management.E_Management.rptGpSect.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="obj\Debug\E_Management.E_Management.PrtGpDepts.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>E_Management.E_Management.PrtGpDepts.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="obj\Debug\E_Management.E_Management.rptGpall.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>E_Management.E_Management.rptGpall.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="obj\Debug\E_Management.E_Management.rptGpdesig.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>E_Management.E_Management.rptGpdesig.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="obj\Debug\E_Management.E_Management.rptGpemp.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>E_Management.E_Management.rptGpemp.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="obj\Debug\E_Management.E_Management.rptGpSect.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>E_Management.E_Management.rptGpSect.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="obj\Debug\E_Management.PrtGpDepts.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>E_Management.PrtGpDepts.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="obj\Debug\E_Management.rptcspass.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>E_Management.rptcspass.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="obj\Debug\E_Management.rptGpall.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>E_Management.rptGpall.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="obj\Debug\E_Management.rptGpdesig.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>E_Management.rptGpdesig.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="obj\Debug\E_Management.rptGpemp.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>E_Management.rptGpemp.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="obj\Debug\E_Management.rptGpSect.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>E_Management.rptGpSect.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -7072,106 +6054,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="PURCHASING\Quotation\quotationhodapproval.aspx.designer.vb">
-      <DependentUpon>quotationhodapproval.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Quotation\QuotationHODapproval.aspx.vb">
-      <DependentUpon>quotationhodapproval.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Quotation\QuoteEdit.aspx.designer.vb">
-      <DependentUpon>QuoteEdit.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Quotation\QuoteEdit.aspx.vb">
-      <DependentUpon>QuoteEdit.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Quotation\QuoteMaster.aspx.designer.vb">
-      <DependentUpon>QuoteMaster.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Quotation\QuoteMaster.aspx.vb">
-      <DependentUpon>QuoteMaster.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PURCHASING\Quotation\QuoteRevision.aspx.designer.vb">
-      <DependentUpon>QuoteRevision.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PURCHASING\Quotation\QuoteRevision.aspx.vb">
-      <DependentUpon>QuoteRevision.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="Class\BLL\VCIDapplications3.vb" />
-    <Compile Include="SessionExpired.aspx.designer.vb">
-      <DependentUpon>SessionExpired.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SessionExpired.aspx.vb">
-      <DependentUpon>SessionExpired.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SMS\SetCompanySmsStatus.aspx.designer.vb">
-      <DependentUpon>SetCompanySmsStatus.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SMS\SetCompanySmsStatus.aspx.vb">
-      <DependentUpon>SetCompanySmsStatus.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SMS\SetIndiSMSStatus.aspx.designer.vb">
-      <DependentUpon>SetIndiSMSStatus.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SMS\SetIndiSMSStatus.aspx.vb">
-      <DependentUpon>SetIndiSMSStatus.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SMS\SetMySmsStatus.aspx.designer.vb">
-      <DependentUpon>SetMySmsStatus.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SMS\SetMySmsStatus.aspx.vb">
-      <DependentUpon>SetMySmsStatus.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="VC\Approval.aspx.designer.vb">
-      <DependentUpon>Approval.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="VC\Approval.aspx.vb">
-      <DependentUpon>Approval.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="VC\SecurityGridView.aspx.designer.vb">
-      <DependentUpon>SecurityGridView.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="VC\SecurityGridView.aspx.vb">
-      <DependentUpon>SecurityGridView.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="VC\vcgridreport.aspx.designer.vb">
-      <DependentUpon>vcgridreport.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="VC\vcgridreport.aspx.vb">
-      <DependentUpon>vcgridreport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="VC\vcrequest.aspx.designer.vb">
-      <DependentUpon>vcrequest.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="VC\vcrequest.aspx.vb">
-      <DependentUpon>vcrequest.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="VC\VCSelfStatus.aspx.designer.vb">
-      <DependentUpon>VCSelfStatus.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="VC\VCSelfStatus.aspx.vb">
-      <DependentUpon>VCSelfStatus.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="VC\vctimeslot.aspx.designer.vb">
-      <DependentUpon>vctimeslot.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="VC\vctimeslot.aspx.vb">
-      <DependentUpon>vctimeslot.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebCustomControl1.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Access\RptCompanies.rpt">
@@ -7202,6 +6085,24 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptScreens.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="AjaxControlToolkit\AjaxControlToolkit\Properties\Resources.resx" />
+    <EmbeddedResource Include="AjaxControlToolkit\AjaxControlToolkit\ScriptResources\ScriptResources.ar.resx" />
+    <EmbeddedResource Include="AjaxControlToolkit\AjaxControlToolkit\ScriptResources\ScriptResources.cs.resx" />
+    <EmbeddedResource Include="AjaxControlToolkit\AjaxControlToolkit\ScriptResources\ScriptResources.de.resx" />
+    <EmbeddedResource Include="AjaxControlToolkit\AjaxControlToolkit\ScriptResources\ScriptResources.es.resx" />
+    <EmbeddedResource Include="AjaxControlToolkit\AjaxControlToolkit\ScriptResources\ScriptResources.fr.resx" />
+    <EmbeddedResource Include="AjaxControlToolkit\AjaxControlToolkit\ScriptResources\ScriptResources.he.resx" />
+    <EmbeddedResource Include="AjaxControlToolkit\AjaxControlToolkit\ScriptResources\ScriptResources.hi.resx" />
+    <EmbeddedResource Include="AjaxControlToolkit\AjaxControlToolkit\ScriptResources\ScriptResources.it.resx" />
+    <EmbeddedResource Include="AjaxControlToolkit\AjaxControlToolkit\ScriptResources\ScriptResources.ja.resx" />
+    <EmbeddedResource Include="AjaxControlToolkit\AjaxControlToolkit\ScriptResources\ScriptResources.ko.resx" />
+    <EmbeddedResource Include="AjaxControlToolkit\AjaxControlToolkit\ScriptResources\ScriptResources.nl.resx" />
+    <EmbeddedResource Include="AjaxControlToolkit\AjaxControlToolkit\ScriptResources\ScriptResources.pt.resx" />
+    <EmbeddedResource Include="AjaxControlToolkit\AjaxControlToolkit\ScriptResources\ScriptResources.resx" />
+    <EmbeddedResource Include="AjaxControlToolkit\AjaxControlToolkit\ScriptResources\ScriptResources.ru.resx" />
+    <EmbeddedResource Include="AjaxControlToolkit\AjaxControlToolkit\ScriptResources\ScriptResources.tr-TR.resx" />
+    <EmbeddedResource Include="AjaxControlToolkit\AjaxControlToolkit\ScriptResources\ScriptResources.zh-CHS.resx" />
+    <EmbeddedResource Include="AjaxControlToolkit\AjaxControlToolkit\ScriptResources\ScriptResources.zh-CHT.resx" />
     <EmbeddedResource Include="CRMnLog\CustomCode.aspx.resx">
       <DependentUpon>CustomCode.aspx.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -7803,211 +6704,7 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="obj\Debug\E_Management.E_Management.E_Management.PrtGpDepts.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>E_Management.E_Management.E_Management.PrtGpDepts.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="obj\Debug\E_Management.E_Management.E_Management.rptGpdesig.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>E_Management.E_Management.E_Management.rptGpdesig.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="obj\Debug\E_Management.E_Management.E_Management.rptGpSect.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>E_Management.E_Management.E_Management.rptGpSect.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="obj\Debug\E_Management.E_Management.PrtGpDepts.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>E_Management.E_Management.PrtGpDepts.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="obj\Debug\E_Management.E_Management.Resources.resources" />
-    <EmbeddedResource Include="obj\Debug\E_Management.E_Management.rptGpall.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>E_Management.E_Management.rptGpall.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="obj\Debug\E_Management.E_Management.rptGpdesig.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>E_Management.E_Management.rptGpdesig.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="obj\Debug\E_Management.E_Management.rptGpemp.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>E_Management.E_Management.rptGpemp.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="obj\Debug\E_Management.E_Management.rptGpSect.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>E_Management.E_Management.rptGpSect.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="obj\Debug\E_Management.PrtGpDepts.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>E_Management.PrtGpDepts.vb</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\E_Management.Resources.resources" />
-    <EmbeddedResource Include="obj\Debug\E_Management.rptcspass.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>E_Management.rptcspass.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="obj\Debug\E_Management.rptGpall.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>E_Management.rptGpall.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="obj\Debug\E_Management.rptGpdesig.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>E_Management.rptGpdesig.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="obj\Debug\E_Management.rptGpemp.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>E_Management.rptGpemp.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="obj\Debug\E_Management.rptGpSect.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>E_Management.rptGpSect.vb</LastGenOutput>
-    </EmbeddedResource>
-    <Content Include="PURCHASING\GRN\App_LocalResources\GRNPreparation.aspx.resx">
-      <SubType>Designer</SubType>
-    </Content>
-    <EmbeddedResource Include="PURCHASING\GRN\BatchDetailsPrint.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>BatchDetailsPrint.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PURCHASING\GRN\GRNBatch_New.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>GRNBatch_New.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PURCHASING\GRN\GRN_Cost_Report.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>GRN_Cost_Report.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PURCHASING\GRN\RptPObySupplier.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>RptPObySupplier.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PURCHASING\GRN\RptPOReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>RptPOReport.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PURCHASING\GRN\Rpt_GRNPreparation.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Rpt_GRNPreparation.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PURCHASING\ISR\SelectUsageCost1.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>SelectUsageCost1.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PURCHASING\ISR\SelectUsageCost1_ByDate.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>SelectUsageCost1_ByDate.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PURCHASING\ISR\UsageCostDetailedReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>UsageCostDetailedReport.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PURCHASING\ISR\UsageCostDetailedReport_ByDate.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>UsageCostDetailedReport_ByDate.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PURCHASING\Master\businesstype.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>businesstype.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PURCHASING\Master\buyersclassification.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>buyersclassification.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PURCHASING\Master\currency.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>currency.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PURCHASING\Master\jobservicescope.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>jobservicescope.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PURCHASING\Master\machinery.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>machinery.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PURCHASING\Master\paymentterm.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>paymentterm.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PURCHASING\Master\product.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>product.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PURCHASING\Master\productclass.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>productclass.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PURCHASING\Master\productprice.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>productprice.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PURCHASING\Master\purchasejustification.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>purchasejustification.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PURCHASING\Master\quotation.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>quotation.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PURCHASING\Master\shipmentterm.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>shipmentterm.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PURCHASING\Master\status.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>status.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PURCHASING\Master\supplier.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>supplier.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PURCHASING\Master\suppliercategory.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>suppliercategory.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PURCHASING\Master\uom.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>uom.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PURCHASING\PO\PO_Report.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>PO_Report.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PURCHASING\PR\PRpendingCount.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>PRpendingCount.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PURCHASING\PR\PR_Report.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>PR_Report.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PURCHASING\PR\SWP.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>SWP.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PURCHASING\Reports\KPI_Report.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>KPI_Report.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Safety\NightDutyReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>NightDutyReport.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Safety\RptSDailyCastingCheckSheet.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>RptSDailyCastingCheckSheet.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Safety\RptTDailyCastingCheckSheet.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>RptTDailyCastingCheckSheet.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Safety\Rpt_DailyBallMillCheckSheet.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Rpt_DailyBallMillCheckSheet.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Safety\TPHRpt_DailyBallMillCheckSheet.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>TPHRpt_DailyBallMillCheckSheet.vb</LastGenOutput>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Access\frmCompany.aspx" />
@@ -10666,195 +9363,6 @@
     <Content Include="MMforms\MMProd\MouldStatusAlert.aspx" />
     <Content Include="MMforms\MMstore\frmIssueMould.aspx" />
     <Content Include="MMforms\Reports\frmMouldList.aspx" />
-    <Content Include="PURCHASING\GRN\GenerateGRN.aspx" />
-    <Content Include="PURCHASING\GRN\GRNCostReportDesign.aspx" />
-    <Content Include="PURCHASING\GRN\GRNGenerateBatch.aspx" />
-    <Content Include="PURCHASING\GRN\GRNPreparation.aspx" />
-    <Content Include="PURCHASING\GRN\GRNPreparation_New.aspx" />
-    <Content Include="PURCHASING\GRN\GRNPrepReport.aspx" />
-    <Content Include="PURCHASING\GRN\PrintBatchDetails.aspx" />
-    <Content Include="PURCHASING\GRN\PrintGRN_Batch.aspx" />
-    <Content Include="PURCHASING\GRN\Purchasing_Cost_Report.aspx" />
-    <Content Include="PURCHASING\GRN\Purchasing_Cost_Report_Direct.aspx" />
-    <Content Include="PURCHASING\GRN\RptPOReport.aspx" />
-    <Content Include="PURCHASING\GRN\RptPOsearch.aspx" />
-    <Content Include="PURCHASING\GRN\SupplierInvoiceGRN.aspx" />
-    <Content Include="PURCHASING\GRN\UploadCOA.aspx" />
-    <Content Include="PURCHASING\ISR\ISRPrintForm.aspx" />
-    <Content Include="PURCHASING\ISR\ISRReprint.aspx" />
-    <Content Include="PURCHASING\ISR\ISR_New.aspx" />
-    <Content Include="PURCHASING\ISR\TimesUp.aspx" />
-    <Content Include="PURCHASING\ISR\UsageCalculation.aspx" />
-    <Content Include="PURCHASING\ISR\UsageCalculationRep.aspx" />
-    <Content Include="PURCHASING\Master\BusinessTypeMaster.aspx" />
-    <Content Include="PURCHASING\Master\businesstypemasterreport.aspx" />
-    <Content Include="PURCHASING\Master\businesstyperpt.aspx" />
-    <Content Include="PURCHASING\Master\buyersclassificationmaster.aspx" />
-    <Content Include="PURCHASING\Master\buyersclassificationmasterreport.aspx" />
-    <Content Include="PURCHASING\Master\buyersclassificationrpt.aspx" />
-    <Content Include="PURCHASING\Master\COCCOAElementMaster.aspx" />
-    <Content Include="PURCHASING\Master\COCCOAElementmasterspec.aspx" />
-    <Content Include="PURCHASING\Master\CostReductionPlan.aspx" />
-    <Content Include="PURCHASING\Master\currencymaster.aspx" />
-    <Content Include="PURCHASING\Master\currencymasterreport.aspx" />
-    <Content Include="PURCHASING\Master\currencymasterrpt.aspx" />
-    <Content Include="PURCHASING\Master\editproduct.aspx" />
-    <Content Include="PURCHASING\Master\EditProductMaster.aspx" />
-    <Content Include="PURCHASING\Master\EditSupplierMaster.aspx" />
-    <Content Include="PURCHASING\Master\Elementmaster.aspx" />
-    <Content Include="PURCHASING\Master\ElementMasterSpec.aspx" />
-    <Content Include="PURCHASING\Master\ExchangeEntryScreen_New.aspx" />
-    <Content Include="PURCHASING\Master\exchangerateentryscreen.aspx" />
-    <Content Include="PURCHASING\Master\JobServiceScopeMaster.aspx" />
-    <Content Include="PURCHASING\Master\JobServiceScopeMasterreport.aspx" />
-    <Content Include="PURCHASING\Master\jobservicescoperpt.aspx" />
-    <Content Include="PURCHASING\Master\machinerymaster.aspx" />
-    <Content Include="PURCHASING\Master\machinerymasterreport.aspx" />
-    <Content Include="PURCHASING\Master\machineryrpt.aspx" />
-    <Content Include="PURCHASING\Master\maruwa.jpg" />
-    <Content Include="PURCHASING\Master\NewProductMasterReport.aspx" />
-    <Content Include="PURCHASING\Master\paymenttermmaster.aspx" />
-    <Content Include="PURCHASING\Master\paymenttermmasterreport.aspx" />
-    <Content Include="PURCHASING\Master\paymenttermrpt.aspx" />
-    <Content Include="PURCHASING\Master\PrintSupplierUserInfo.aspx" />
-    <Content Include="PURCHASING\Master\ProductClassMaster.aspx" />
-    <Content Include="PURCHASING\Master\productclassmasterreport.aspx" />
-    <Content Include="PURCHASING\Master\productclassrpt.aspx" />
-    <Content Include="PURCHASING\Master\productmaster.aspx" />
-    <Content Include="PURCHASING\Master\ProductMasterApproval.aspx" />
-    <Content Include="PURCHASING\Master\productmasterreport.aspx" />
-    <Content Include="PURCHASING\Master\productpricecomparison.aspx" />
-    <Content Include="PURCHASING\Master\productpricerpt.aspx" />
-    <Content Include="PURCHASING\Master\productrpt.aspx" />
-    <Content Include="PURCHASING\Master\purchasejustificationmaster.aspx" />
-    <Content Include="PURCHASING\Master\purchasejustificationmasterreport.aspx" />
-    <Content Include="PURCHASING\Master\purchasejustificationrpt.aspx" />
-    <Content Include="PURCHASING\Master\quotationapproval.aspx" />
-    <Content Include="PURCHASING\Master\quotationpending.aspx" />
-    <Content Include="PURCHASING\Master\quotationreport.aspx" />
-    <Content Include="PURCHASING\Master\quotationrpt.aspx" />
-    <Content Include="PURCHASING\Master\shipmenttermmaster.aspx" />
-    <Content Include="PURCHASING\Master\shipmenttermmasterreport.aspx" />
-    <Content Include="PURCHASING\Master\shipmenttermrpt.aspx" />
-    <Content Include="PURCHASING\Master\statusrpt.aspx" />
-    <Content Include="PURCHASING\Master\suppliercategorymaster.aspx" />
-    <Content Include="PURCHASING\Master\suppliercategorymasterreport.aspx" />
-    <Content Include="PURCHASING\Master\suppliercategoryrpt.aspx" />
-    <Content Include="PURCHASING\Master\SupplierMaster.aspx" />
-    <Content Include="PURCHASING\Master\SupplierMasterApproval.aspx" />
-    <Content Include="PURCHASING\Master\SupplierMasterEdit.aspx" />
-    <Content Include="PURCHASING\Master\SupplierMasterEditDetails.aspx" />
-    <Content Include="PURCHASING\Master\SupplierMasterreport.aspx" />
-    <Content Include="PURCHASING\Master\supplierrpt.aspx" />
-    <Content Include="PURCHASING\Master\supplierstatusmaster.aspx" />
-    <Content Include="PURCHASING\Master\supplierstatusmasterreport.aspx" />
-    <Content Include="PURCHASING\Master\uommasterreport.aspx" />
-    <Content Include="PURCHASING\Master\uomrpt.aspx" />
-    <Content Include="PURCHASING\PO\BudgetAllocation.aspx" />
-    <Content Include="PURCHASING\PO\BudgetMaster.aspx" />
-    <Content Include="PURCHASING\PO\CancelPOByDepartment.aspx" />
-    <Content Include="PURCHASING\PO\EditPO.aspx" />
-    <Content Include="PURCHASING\PO\EditPOverification.aspx" />
-    <Content Include="PURCHASING\PO\PackingQuantity.aspx" />
-    <Content Include="PURCHASING\PO\POAverageRequest.aspx" />
-    <Content Include="PURCHASING\PO\POBatchApproval.aspx" />
-    <Content Include="PURCHASING\PO\POEAapproval.aspx" />
-    <Content Include="PURCHASING\PO\POEAapprovalByBatch.aspx" />
-    <Content Include="PURCHASING\PO\POEAapprovalByBatchMain.aspx" />
-    <Content Include="PURCHASING\PO\POEAapprovalNew.aspx" />
-    <Content Include="PURCHASING\PO\POEmailApproval.aspx" />
-    <Content Include="PURCHASING\PO\POEmpAccess.aspx" />
-    <Content Include="PURCHASING\PO\POform.aspx" />
-    <Content Include="PURCHASING\PO\POHodApprove.aspx" />
-    <Content Include="PURCHASING\PO\POListBatch.aspx" />
-    <Content Include="PURCHASING\PO\POMaster.aspx" />
-    <Content Include="PURCHASING\PO\POMasterJapan.aspx" />
-    <Content Include="PURCHASING\PO\POPreviousPurInfo.aspx" />
-    <Content Include="PURCHASING\PO\POPurchaseIncharge.aspx" />
-    <Content Include="PURCHASING\PO\PORequest.aspx" />
-    <Content Include="PURCHASING\PO\PORequestNew.aspx" />
-    <Content Include="PURCHASING\PO\POStatus.aspx" />
-    <Content Include="PURCHASING\PO\POvcidHodApprove.aspx" />
-    <Content Include="PURCHASING\PO\POvcidHodApproveNew.aspx" />
-    <Content Include="PURCHASING\PO\POVerification.aspx" />
-    <Content Include="PURCHASING\PO\POVerificationNew.aspx" />
-    <Content Include="PURCHASING\PO\POVerificationSub.aspx" />
-    <Content Include="PURCHASING\PO\POVerificationSubNew.aspx" />
-    <Content Include="PURCHASING\PO\POVerified.aspx" />
-    <Content Include="PURCHASING\PO\PO_VCID_HOD_Approve.aspx" />
-    <Content Include="PURCHASING\PO\PrintPO_New.aspx" />
-    <Content Include="PURCHASING\PO\WebService1.asmx" />
-    <Content Include="PURCHASING\PO\WebService3.asmx" />
-    <Content Include="PURCHASING\ProformaPO\BudgetAndProvision.aspx" />
-    <Content Include="PURCHASING\ProformaPO\PO.aspx" />
-    <Content Include="PURCHASING\ProformaPO\PO.htm" />
-    <Content Include="PURCHASING\ProformaPO\POApproval.aspx" />
-    <Content Include="PURCHASING\ProformaPO\POApproved.aspx" />
-    <Content Include="PURCHASING\ProformaPO\POCloseOpen.aspx" />
-    <Content Include="PURCHASING\ProformaPO\PoHistory.aspx" />
-    <Content Include="PURCHASING\ProformaPO\POPreparation.aspx" />
-    <Content Include="PURCHASING\ProformaPO\PORequestStatus.aspx" />
-    <Content Include="PURCHASING\ProformaPO\PORequest_IN.aspx" />
-    <Content Include="PURCHASING\ProformaPO\RequestDetail.aspx" />
-    <Content Include="PURCHASING\ProformaPO\RequestForm.aspx" />
-    <Content Include="PURCHASING\ProformaPO\StockDetails.aspx" />
-    <Content Include="PURCHASING\ProformaPO\StockReport_IN.aspx" />
-    <Content Include="PURCHASING\ProformaPO\SupplierInput.aspx" />
-    <Content Include="PURCHASING\ProformaPO\SupplierInputVerify.aspx" />
-    <Content Include="PURCHASING\PR\EAapprovalsMultilevel.aspx" />
-    <Content Include="PURCHASING\PR\EAapproval_PR.aspx" />
-    <Content Include="PURCHASING\PR\EAapproval_PRall.aspx" />
-    <Content Include="PURCHASING\PR\EAeditPR.aspx" />
-    <Content Include="PURCHASING\PR\EditPR.aspx" />
-    <Content Include="PURCHASING\PR\HODapproval_Dept.aspx" />
-    <Content Include="PURCHASING\PR\HODapproval_SWP.aspx" />
-    <Content Include="PURCHASING\PR\MatchReqDescWithPartno.aspx" />
-    <Content Include="PURCHASING\PR\PO_Report_PrintForm1.aspx" />
-    <Content Include="PURCHASING\PR\PRrptPendingCount.aspx" />
-    <Content Include="PURCHASING\PR\PRSelfStatus.aspx" />
-    <Content Include="PURCHASING\PR\PRwithQuot.aspx" />
-    <Content Include="PURCHASING\PR\PR_Report_PrintForm.aspx" />
-    <Content Include="PURCHASING\PR\PR_Report_PrintForm1.aspx" />
-    <Content Include="PURCHASING\PR\PurchaseRequest.aspx" />
-    <Content Include="PURCHASING\PR\VCIDHODapproval_PR.aspx" />
-    <Content Include="PURCHASING\PR\VCIDHODeditPR.aspx" />
-    <Content Include="PURCHASING\PR\vcidverificationfirstscreen.aspx" />
-    <Content Include="PURCHASING\PR\VCIDVerificationMPRC.aspx" />
-    <Content Include="PURCHASING\PR\VCIDVerificationVerifyScreen.aspx" />
-    <Content Include="PURCHASING\PR\VCIDVerificationVerifyScreenSWP.aspx" />
-    <Content Include="PURCHASING\Reports\GRN_Status.aspx" />
-    <Content Include="PURCHASING\Reports\KPI_Report_Design.aspx" />
-    <Content Include="PURCHASING\Reports\KPI_Report_Design1.aspx" />
-    <Content Include="PURCHASING\Reports\KPI_Report_Design2.aspx" />
-    <Content Include="PURCHASING\Reports\OverallCostSummary.aspx" />
-    <Content Include="PURCHASING\Reports\PendingPOByDepartment.aspx" />
-    <Content Include="PURCHASING\Reports\PendingPOBySection.aspx" />
-    <Content Include="PURCHASING\Reports\PendingPODetails.aspx" />
-    <Content Include="PURCHASING\Reports\PendingPRDetails.aspx" />
-    <Content Include="PURCHASING\Reports\PendingPRDetails_PurHOD.aspx" />
-    <Content Include="PURCHASING\Reports\RemoveItemFromPOndPR.aspx" />
-    <Content Include="Safety\BallMillOverallReport.aspx" />
-    <Content Include="Safety\DailyBallMillCheckSheet.aspx" />
-    <Content Include="Safety\NightDutyCheckSheet1.aspx" />
-    <Content Include="Safety\NightDutyCheckSheetReport.aspx" />
-    <Content Include="Safety\RptDailyBallMillCheckSheet.aspx" />
-    <Content Include="Safety\RPTOverall.aspx" />
-    <Content Include="Safety\RptSDailyCastingCheckSheet.aspx" />
-    <Content Include="Safety\RptTDailyCastingCheckSheet.aspx" />
-    <Content Include="Safety\SCastingCheckSheetGridReport.aspx" />
-    <Content Include="Safety\SDailyCastingCheckSheet.aspx" />
-    <Content Include="Safety\TCastingCheckSheetGridReport.aspx" />
-    <Content Include="Safety\TDailyCastingCheckSheet.aspx" />
-    <Content Include="Safety\TPHBallMillOverallReport.aspx" />
-    <Content Include="Safety\TPHDailyBallMillCheckSheet.aspx" />
-    <Content Include="Safety\TPHRptDailyBallMillCheckSheet.aspx" />
-    <Content Include="Safety\TPHRPTOverall.aspx" />
-    <Content Include="SMS\MainOnoffCompany.aspx" />
-    <Content Include="SMS\RegHpuser.aspx" />
-    <Content Include="SMS\RegisterModule.aspx" />
-    <Content Include="SMS\RegisterSystem.aspx" />
-    <Content Include="SMS\RegSMScode.aspx" />
-    <Content Include="SMS\RegUserandHp.aspx" />
     <Content Include="HRMIS\safety\BinCodeMaster.aspx" />
     <Content Include="HRMIS\safety\Disposal Entry.aspx" />
     <Content Include="HRMIS\safety\domesticwastereport.aspx" />
@@ -11176,9 +9684,6 @@
     <Content Include="images\truck.png" />
     <Content Include="images\wait.bmp" />
     <Content Include="Logout.aspx" />
-    <Content Include="obj\Debug\E-Management.dll" />
-    <Content Include="obj\Debug\E-Management.pdb" />
-    <Content Include="obj\Debug\E-Management.xml" />
     <Content Include="obj\Debug\TempPE\My Project.Resources.Designer.vb.dll" />
     <Content Include="obj\Debug\TempPE\Reports.Hrmis.DsDept.Designer.vb.dll" />
     <Content Include="obj\Debug\TempPE\Reports.Hrmis.DSEmpmaster.Designer.vb.dll" />
@@ -11193,8 +9698,6 @@
     <Content Include="obj\Debug\TempPE\Reports.Hrmis.RptGpDepts.vb.dll" />
     <Content Include="obj\Debug\TempPE\Reports.Hrmis.rptGpdesig.vb.dll" />
     <Content Include="obj\Debug\TempPE\Reports.Hrmis.rptGpSect.vb.dll" />
-    <Content Include="obj\E-Management.vbproj.FileListAbsolute.txt" />
-    <Content Include="Output-Build.txt" />
     <Content Include="images\backg.jpg" />
     <Content Include="images\flowerfinal.jpg" />
     <Content Include="images\maruwaAnimLogo.gif" />
@@ -11203,6 +9706,41 @@
     <Content Include="images\unknown.jpg" />
     <Content Include="App_Themes\buttonems\button.skin" />
     <Content Include="ems.Master" />
+    <Content Include="AjaxControlToolkit\AjaxControlExtender\AjaxControlExtender.vsi" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\AjaxControlToolkit.csproj" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\AjaxControlToolkit.snk" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit\ExtenderBase\Design\ExternalReferences.t4" />
+    <Content Include="AjaxControlToolkit\Binaries\Tools.netmodule" />
+    <Content Include="AjaxControlToolkit\EULA.rtf" />
+    <None Include="AjaxControlToolkit\SampleWebSite\App_Code\TodoItems.xsd" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\App_Code\TodoItems.xss">
+      <DependentUpon>TodoItems.xsd</DependentUpon>
+    </Content>
+    <Content Include="AjaxControlToolkit\SampleWebSite\App_Themes\SampleSiteTheme\CollapsiblePanel.skin" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\App_Themes\SampleSiteTheme\Menu.ContextMenu.skin" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\App_Themes\SampleSiteTheme\ToolkitScriptManager.skin" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\CombineScriptsHandler.ashx" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\DefaultMaster.master" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Samples.sitemap" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Walkthroughs.sitemap" />
+    <Content Include="AjaxControlToolkit\SampleWebSite\Web.config" />
+    <Content Include="AjaxControlToolkit\TemplateVSI\ProjectTemplateCS\AjaxControlExtender.csproj" />
+    <Content Include="AjaxControlToolkit\TemplateVSI\ProjectTemplateVB\AjaxControlExtender.vbproj" />
+    <Content Include="AjaxControlToolkit\TemplateVSI\TemplateVSI.csproj" />
+    <Content Include="AjaxControlToolkit\TemplateVSI\TemplateVSI.csproj.vspscc" />
+    <Content Include="AjaxControlToolkit\TemplateVSI\TemplateVSI.vscontent" />
+    <Content Include="AjaxControlToolkit\TemplateVSI\ToolkitWebsiteTemplate\ToolkitWebsiteTemplateCS\AjaxControlToolkitWebsiteCS.webproj" />
+    <Content Include="AjaxControlToolkit\TemplateVSI\ToolkitWebsiteTemplate\ToolkitWebsiteTemplateVB\AjaxControlToolkitWebsiteVB.webproj" />
+    <Content Include="AjaxControlToolkit\TemplateVSI\ToolkitWebsiteTemplate\web.config" />
+    <None Include="AjaxControlToolkit\ToolkitTests\App_Code\TodoItems.xsd" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\App_Code\TodoItems.xss">
+      <DependentUpon>TodoItems.xsd</DependentUpon>
+    </Content>
+    <Content Include="AjaxControlToolkit\ToolkitTests\App_Themes\TestTheme\SkinFile.skin" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\CombineScriptsHandler.ashx" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Default.master" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Manual\Tabs\MasterPage.master" />
+    <Content Include="AjaxControlToolkit\ToolkitTests\Web.config" />
     <None Include="announcement\font-awesome\fonts\fontawesome-webfont.eot" />
     <None Include="announcement\font-awesome\fonts\fontawesome-webfont.ttf" />
     <None Include="announcement\font-awesome\fonts\fontawesome-webfont.woff" />
@@ -11262,20 +9800,6 @@
     <None Include="HtmlEditor.VS2005\Site\Bin\AjaxControlToolkit.dll.refresh" />
     <None Include="HtmlEditor.VS2005\Site\Bin\Winthusiasm.HtmlEditor.dll.refresh" />
     <Content Include="HtmlEditor.VS2005\Site\Web.config" />
-    <Content Include="PURCHASING\Quotation\quotationhodapproval.aspx" />
-    <Content Include="PURCHASING\Quotation\QuoteEdit.aspx" />
-    <Content Include="PURCHASING\Quotation\QuoteMaster.aspx" />
-    <Content Include="PURCHASING\Quotation\QuoteRevision.aspx" />
-    <Content Include="SessionExpired.aspx" />
-    <Content Include="SMS\SetCompanySmsStatus.aspx" />
-    <Content Include="SMS\SetIndiSMSStatus.aspx" />
-    <Content Include="SMS\SetMySmsStatus.aspx" />
-    <Content Include="VC\Approval.aspx" />
-    <Content Include="VC\SecurityGridView.aspx" />
-    <Content Include="VC\vcgridreport.aspx" />
-    <Content Include="VC\vcrequest.aspx" />
-    <Content Include="VC\VCSelfStatus.aspx" />
-    <Content Include="VC\vctimeslot.aspx" />
     <None Include="HtmlEditor.VS2005\Winthusiasm.HtmlEditor\obj\Debug\ResolveAssemblyReference.cache" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -11288,7 +9812,12 @@
     </None>
     <Content Include="NewEMS.Master" />
     <None Include="obj\Debug\E-Management.vbproj.GenerateResource.Cache" />
-    <None Include="obj\Debug\ResolveAssemblyReference.cache" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
@@ -11339,7 +9868,7 @@
     <Folder Include="MMforms\MMadmin\Images\Reports\images\tree\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
-  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v8.0\WebApplications\Microsoft.WebApplication.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v17.0\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
@@ -11358,6 +9887,10 @@
           <IISUrl>
           </IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
     </VisualStudio>
